@@ -1,0 +1,150 @@
+---
+title: Fixed Assets
+description: Register fixed assets, track their depreciation, and dispose of them.
+---
+
+**Fixed Assets** registers the assets your organization owns, calculates their
+depreciation automatically, and records their disposal.
+
+## The Fixed Assets list
+
+Go to **Fixed Assets Management → Fixed Assets** in the sidebar. The same menu
+also contains [Fixed Assets Categories](/docs/banking/fixed-asset-categories).
+
+<Screenshot src="/images/banking/assets-list-annotated.jpg" alt="Fixed Assets list" caption="(1) New Asset, (2) status tabs, (3) Location filter, (4) Search, (5) View." />
+
+- **Status tabs** — **All**, **Created**, **Depreciating**, **Depreciated**, and
+  **Disposed**, each with a count.
+- **Filters** — **Location** and **Search**.
+- **Columns** — Asset Code, Asset Name, Status, Purchase Date, Cost, Method, Net
+  Book Value, and Actions.
+
+Select **View** (eye) to open an asset.
+
+## Creating an asset
+
+<Steps>
+
+<Step>
+### Open the form
+On the Fixed Assets page, select **New Asset**.
+</Step>
+
+<Step>
+### Link the purchase entry
+In **Debit Entry**, search for and select the debit transaction that recorded
+the asset purchase. Each entry shows the account, location, date, and amount.
+</Step>
+
+<Step>
+### Enter the asset information
+Enter the **Asset Name**, and optionally choose a **Category** and
+**Location**. Enter the **Purchase Cost**, and check the **Purchase Date** and
+**Depreciation Start Date** (both default to today). Optionally add a
+**Description**.
+
+When you choose a **Category**, the depreciation details — method, useful life,
+depreciation account, and accumulated depreciation account — are filled in from
+the [category](/docs/banking/fixed-asset-categories). A message under the field
+confirms this, for example *Depreciation details filled in from Vehicles
+Pakistan. You can change them.* Any change you make applies to this asset only.
+
+<Screenshot src="/images/banking/assets-new-category-prefill.jpg" alt="Category selected on a new asset" caption="(1) Choosing a Category fills in the depreciation details." />
+
+<Screenshot src="/images/banking/assets-new-1.jpg" alt="New Asset — Asset Information" caption="(1) Debit Entry, (2) Asset Name, (3) Category, (4) Location, (5) Purchase Cost, (6) Purchase Date, (7) Depreciation Start Date, (8) Description." />
+</Step>
+
+<Step>
+### Enter the depreciation details
+Under **Depreciation Details**, choose the **Depreciation Method**:
+
+| Method | Required field | How it works |
+| --- | --- | --- |
+| **Straight Line** | **Useful Life (Years)** | Spreads the depreciation evenly over the useful life of the asset. Each period has the same depreciation expense. |
+| **Declining Balance** | **Depreciation Rate (%)** | Applies the rate to the remaining book value each period, so depreciation is larger at first and decreases over time. |
+
+Depreciation begins in the month of acquisition and is calculated
+automatically based on the purchase date (**Month-of-Purchase Policy**).
+
+Choose the **Depreciation Account** (the expense account) and the
+**Accumulated Depreciation Account**.
+
+<Screenshot src="/images/banking/assets-new-2.jpg" alt="New Asset — Depreciation Details" caption="(1) Depreciation Method, (2) Useful Life (Years), (3) Month-of-Purchase Policy, (4) Depreciation Account, (5) Accumulated Depreciation Account." />
+</Step>
+
+<Step>
+### Preview the depreciation (optional)
+Select **Show Depreciation Preview** to see the schedule before you save. The
+**Depreciation Preview** shows the total number of months and, for each month
+end, the **Depreciation Amount**, **Accumulated Depreciation**, and **Net Book
+Value** — so you can see when the asset will be fully depreciated. Select
+**Hide Depreciation Preview** to close it.
+
+<Screenshot src="/images/banking/assets-depreciation-preview.jpg" alt="Depreciation Preview" caption="(1) Show or hide the preview, (2) the monthly schedule." />
+</Step>
+
+<Step>
+### Save
+Select **Create Asset**, or **Cancel** to discard it.
+</Step>
+
+</Steps>
+
+<Callout type="info">
+  Depreciation runs automatically at the **end of each month**. The run covers
+  every asset with depreciation due — it is not run per asset or per category.
+</Callout>
+
+## Viewing an asset
+
+Select **View** on an asset's row.
+
+<Screenshot src="/images/banking/assets-detail.jpg" alt="Asset details" caption="(1) Dispose Asset, (2) Asset Overview, (3) Financial Summary, (4) Depreciation Information." />
+
+| Section | What it shows |
+| --- | --- |
+| **Asset Overview** | Name, asset code, Status, Category, Purchase Date, Depreciation Start Date, Location, Depreciation Account, and Accumulated Depreciation Account. |
+| **Financial Summary** | Original Cost, Accumulated Depreciation, and Net Book Value. |
+| **Depreciation Information** | Depreciation Method, Useful Life, and Last Depreciation Date. |
+| **Asset Value** | A chart of the Net Book Value and Accumulated Depreciation as a share of the original cost. |
+| **Depreciation Schedule** | Every depreciation entry with its Date, Depreciation Amount, Accumulated Depreciation, Net Book Value, and Status (**Completed** or **Scheduled**). |
+| **GL Impact** | The journal entries posted for the asset. |
+| **History** | Changes made to the asset. |
+
+## Disposing of an asset
+
+<Steps>
+
+<Step>
+### Open Dispose Asset
+On the asset's page, select **Dispose Asset**. The dialog warns that the action
+cannot be undone: disposing updates the asset's status and creates the journal
+entries for the disposal. It shows the asset's **Original Cost**,
+**Accumulated Depreciation**, and **Net Book Value**.
+
+<Screenshot src="/images/banking/assets-dispose.jpg" alt="Dispose Asset dialog" caption="(1) Warning, (2) Current Asset Information, (3) Disposal Type, (4) Disposal Date." width={760} />
+</Step>
+
+<Step>
+### Enter the disposal details
+Choose the **Disposal Type** — **Sale**, **Write-off**, or **Destroy** — and
+check the **Disposal Date**. For a sale, enter the **Sale Price**; the **Loss
+on Disposal** is shown, based on the net book value. Choose the
+**Payment Method** and **Payment Account**, and optionally add **Description /
+Notes**.
+</Step>
+
+<Step>
+### Confirm
+Select **Dispose Asset**, or **Cancel** to close the dialog. Disposed assets
+are listed under the **Disposed** tab.
+</Step>
+
+</Steps>
+
+## Related
+
+See the [Asset Register](/docs/reports/register-reports) report for a full
+listing of assets, and [Fixed Asset
+Categories](/docs/banking/fixed-asset-categories) to group assets and set
+default depreciation settings.

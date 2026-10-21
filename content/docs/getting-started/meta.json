@@ -1,0 +1,18 @@
+{
+  "title": "Getting Started",
+  "icon": "Rocket",
+  "root": true,
+  "pages": [
+    "index",
+    "what-is-accountwise",
+    "key-concepts",
+    "user-roles",
+    "initial-setup",
+    "the-accountwise-workflow",
+    "global-search",
+    "---Quickstart---",
+    "first-invoice",
+    "first-bill",
+    "recording-a-payment"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Banking",
+  "icon": "Landmark",
+  "root": true,
+  "pages": [
+    "index",
+    "bank-transfers",
+    "bank-deposits",
+    "bank-reconciliation",
+    "reconciliation-rules",
+    "---Planning & Assets---",
+    "budgeting",
+    "fixed-assets",
+    "fixed-asset-categories"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Reports",
+  "icon": "ChartColumn",
+  "root": true,
+  "pages": [
+    "index",
+    "---Financial Statements---",
+    "ledger-reports",
+    "income-statement-reports",
+    "balance-sheet-reports",
+    "register-reports",
+    "---Receivables & Payables---",
+    "customer-reports",
+    "vendor-reports",
+    "---Sales & Purchases---",
+    "item-reports",
+    "salesperson-reports",
+    "purchase-reports",
+    "---Planning---",
+    "budget-vs-actual"
+  ]
+}

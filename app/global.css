@@ -1,0 +1,135 @@
+﻿@import 'tailwindcss';
+@import 'fumadocs-ui/css/vitepress.css';
+@import 'fumadocs-ui/css/preset.css';
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* --- AccountWise: docs top navigation polish --- */
+@media (min-width: 1024px) {
+  #nd-subnav .flex-1 {
+    justify-content: flex-start;
+  }
+  #nd-subnav .flex-1 > div:first-child {
+    margin-right: auto;
+    gap: 1.25rem;
+  }
+}
+
+/* --- AccountWise: clean, left-aligned docs nav links --- */
+@media (min-width: 1024px) {
+  #nd-subnav button[data-search-full] {
+    display: none !important;
+  }
+  #nd-subnav .flex-1 {
+    justify-content: flex-start !important;
+  }
+  #nd-subnav .flex-1 > div:first-child {
+    margin-right: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 1.5rem !important;
+  }
+  #nd-subnav .flex-1 > div:first-child > a {
+    white-space: nowrap !important;
+  }
+}
+
+/* --- AccountWise: restore the search box, on the right --- */
+@media (min-width: 1024px) {
+  #nd-subnav button[data-search-full] {
+    display: inline-flex !important;
+    order: 10 !important;
+    flex: 0 0 auto !important;
+    width: 220px !important;
+    margin-left: 0.75rem !important;
+  }
+}
+
+/* --- AccountWise: screenshot & image styling --- */
+.aw-doc-image,
+.aw-screenshot img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.aw-doc-image {
+  margin: 1.5rem auto;
+}
+.aw-screenshot {
+  margin: 1.5rem 0;
+}
+.aw-screenshot img {
+  margin: 0 auto;
+}
+.aw-screenshot figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-fd-muted-foreground, #6b7280);
+}
+
+/* --- AccountWise: image carousel --- */
+.aw-carousel { margin: 1.5rem 0; }
+.aw-carousel-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.aw-carousel-img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.08);
+}
+.aw-carousel-arrow {
+  flex: 0 0 auto;
+  width: 2rem; height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  background: var(--color-fd-background, #fff);
+  color: var(--color-fd-foreground, #111);
+  font-size: 1.25rem; line-height: 1;
+  cursor: pointer;
+}
+.aw-carousel-arrow:hover { background: var(--color-fd-accent, #f3f4f6); }
+.aw-carousel-caption {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-fd-muted-foreground, #6b7280);
+}
+.aw-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.aw-carousel-dot {
+  width: 0.5rem; height: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  background: var(--color-fd-border, #d1d5db);
+  cursor: pointer;
+  padding: 0;
+}
+.aw-carousel-dot.active { background: var(--color-fd-primary, #16a34a); }
+.aw-carousel-count {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-fd-muted-foreground, #6b7280);
+}

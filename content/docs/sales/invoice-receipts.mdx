@@ -1,0 +1,86 @@
+---
+title: Invoice Receipts
+description: Record a customer's payment against one or more invoices.
+---
+
+An **Invoice Receipt** records payment received from a customer.
+
+## Two ways to record
+
+- Select **Mark as Paid** on the invoice. You can optionally attach a file. See
+  [Invoices](/docs/sales/invoices#recording-payment).
+- Create a receipt from **Sales → Receipts → Invoice Receipts**, as described
+  below. This lets you apply one payment to several invoices.
+
+## The Invoice Receipts list
+
+Go to **Sales → Receipts → Invoice Receipts**. The list shows the **Customer
+Name** (with the receipt number), **Invoice Receipt Date**, and **Amount**.
+
+<Screenshot src="/images/sales/invoice-receipt-list-annotated.jpg" alt="Invoice Receipts list" caption="(1) New Invoice Receipt, (2) Customers filter, (3) Search, (4) View and the See more menu." />
+
+Use **View** (eye icon) to open a receipt. The **See more** menu (**⋮**) offers
+**Download**.
+
+## Recording a payment
+
+<Steps>
+
+<Step>
+### Open the Receive Payment form
+On the Invoice Receipts page, select **New Invoice Receipt**. The **Receive
+Payment** form opens.
+</Step>
+
+<Step>
+### Select the customer and payment details
+Choose the **Customer**. The amount being received and the **Customer balance**
+appear on the right. Then choose the **Account** where payment is received,
+and check the **Payment Date** and **Payment Method** (the customer's payment
+method is filled in). Optionally select a **Location**.
+
+<Screenshot src="/images/sales/invoice-receipt-new-1.jpg" alt="Receive Payment form" caption="(1) Customer, (2) amount and customer balance, (3) Account, (4) Payment Date, (5) Payment Method, (6) Location, (7) Amount Received, (8) Use Credit Memos." />
+</Step>
+
+<Step>
+### Enter the amount and apply it to invoices
+Enter the **Amount Received**. Under **Invoice Items**, the customer's open
+invoices are listed with their **Due Date**, **Original Amount**, and **Open
+Balance**. Tick the invoices being paid and enter the **Payment** for each —
+full or partial payment is supported. Use **Find Invoice No.** to find a
+specific invoice.
+
+Tick **Use Credit Memos** to apply an existing credit memo to the payment.
+
+<Screenshot src="/images/sales/invoice-receipt-new-2.jpg" alt="Invoice Items on the Receive Payment form" caption="(9) Find Invoice No., (10) tick the invoices being paid, (11) enter the payment for each invoice." />
+</Step>
+
+<Step>
+### Add attachments and save
+Optionally attach files under **Attachments**. Select **Create**, or **Create &
+Send** to email the receipt to the customer. Select **Cancel** to discard it.
+</Step>
+
+</Steps>
+
+If the payment is partial, the invoice status becomes **Partial** and Accounts
+Receivable updates accordingly.
+
+<Callout type="info">
+  There is a configuration where, when an invoice receipt is sent to a customer,
+  the paid invoices are attached to it as well.
+</Callout>
+
+<Callout type="info">
+  Invoice receipts support the [approval workflow](/docs/administration/approvals). When
+  your organization turns on **Requires Approval** for this document in
+  **Settings → Approval Policy**, a new or changed document must be approved
+  before it takes effect.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Invoices" href="/docs/sales/invoices" />
+  <Card title="Bank Deposits" href="/docs/banking/bank-deposits" />
+</Cards>

@@ -1,0 +1,167 @@
+---
+title: Budgeting
+description: Create yearly budgets with monthly amounts per account, for all locations or one location.
+---
+
+**Budgeting** lets you plan monthly amounts for accounts across a budget year.
+A budget can apply to a specific **location**, or to no location
+(**location-agnostic**).
+
+## The Budgeting list
+
+Go to **Budgeting** in the sidebar.
+
+<Screenshot src="/images/banking/budget-list-status.jpg" alt="Budgeting list" caption="(1) New Budget, (2) Location filter, (3) Search budgets, (4) status tabs, (5) Status, (6) View, Edit, and Delete." />
+
+The list shows each budget's **Year** (with its location), **Name**, **Last
+Modified** date, **Amount**, and **Status**. Use the row icons to **View**,
+**Edit**, or **Delete** a budget.
+
+Use the tabs to filter budgets by status. Each tab shows a count:
+
+| Status | Meaning |
+| --- | --- |
+| **Active** | The budget is in effect. |
+| **Pending approval** | The budget, or a change to it, is waiting for approval. See [Approvals](#approvals). |
+| **Rejected** | The approver rejected the budget or the change. |
+| **Draft** | The budget has not been submitted. |
+
+## Creating a budget
+
+<Steps>
+
+<Step>
+### Open the form
+On the Budgeting page, select **New Budget**.
+</Step>
+
+<Step>
+### Enter the budget details
+Under **Budget Details**, choose the **Budget Year** (it defaults to the current
+year). Optionally choose a **Location** — leave it empty for a
+location-agnostic budget — and add a **Description/Notes**.
+
+Only one location-agnostic budget can exist for a year. If one already exists,
+a message asks you to select a different year or choose a specific location.
+
+<Screenshot src="/images/banking/budget-new-1.jpg" alt="Budget Details" caption="(1) Budget Year, (2) Location, (3) Description/Notes, (4) message when a location-agnostic budget already exists for the year, (5) Import CSV." />
+</Step>
+
+<Step>
+### Import from CSV (optional)
+To fill in the budget from a file, select **Import CSV** under **Import from
+CSV (Optional)** and upload the CSV file.
+</Step>
+
+<Step>
+### Add accounts
+Under **Budget Entry**, open **Select Accounts** and tick the accounts to
+budget. Each account is shown with its code, type, and current balance. Use
+**Select All** to select every account. Optionally enter a **Default Amount**,
+then select **Add Accounts** (the button shows how many accounts you selected).
+
+<Screenshot src="/images/banking/budget-new-2.jpg" alt="Select accounts for the budget" caption="(1) Default Amount, (2) tick the accounts, (3) Select Accounts, (4) Add Account." />
+</Step>
+
+<Step>
+### Enter the monthly amounts
+Under **Budget Accounts**, enter an amount for each month (**Jan** to **Dec**)
+for each account. The **Total** for each account and the **Monthly Totals**
+update as you type. Use **Clear All Amounts** to reset the amounts, or **Remove
+All Accounts** to start again.
+
+<Screenshot src="/images/banking/budget-new-3.jpg" alt="Monthly budget amounts" caption="(1) Clear All Amounts, (2) Remove All Accounts, (3) monthly amounts for an account, (4) Monthly Totals." />
+</Step>
+
+<Step>
+### Save
+Select **Create**, or **Cancel** to discard the budget. If approvals are turned
+on for budgets, the budget is submitted for approval first — see
+[Approvals](#approvals).
+</Step>
+
+</Steps>
+
+<Callout type="info">
+  Budget amounts are **monthly**. For example, a budget of 5,000 in each month
+  for an account means 5,000 per month.
+</Callout>
+
+## Viewing a budget
+
+Select **View** (eye) on a row.
+
+<Screenshot src="/images/banking/budget-view.jpg" alt="Budget details" caption="(1) Back, (2) Budget Year, Total Budget, Location, and Monthly Average, (3) Budget Information." />
+
+The page also shows the **Monthly Distribution** (the budget allocation across
+months, with the lowest and highest months marked) and the **Budget Accounts**
+table with the monthly breakdown for each account.
+
+The page header shows the budget's status next to its name — for example,
+**Active** or **Rejected**.
+
+<Screenshot src="/images/banking/budget-status-badge.jpg" alt="Budget status on the budget page" caption="(1) The budget's status." />
+
+## Approvals
+
+Budgets support the [approval workflow](/docs/administration/approvals). When
+your organization turns on **Requires Approval** for **Budget** (under the
+**Accounting** tab in **Settings → Approval Policy**):
+
+<Steps>
+
+<Step>
+### Submit the budget
+Create the budget as usual and select **Create**. The **Submit for Approval**
+dialog opens. Add a note — optional or required, depending on the policy — and
+select **Submit**.
+
+<Screenshot src="/images/administration/approvals-submit-dialog.jpg" alt="Submit for Approval dialog" caption="(1) Note, (2) Submit." width={560} />
+</Step>
+
+<Step>
+### Wait for the decision
+The budget is saved with the status **Pending approval**. It appears under the
+**Pending approval** tab, with a **Cancel approval request** icon on its row.
+
+<Screenshot src="/images/banking/budget-pending-row.jpg" alt="Pending budget in the list" caption="(1) Pending approval tab, (2) status, (3) Cancel approval request." />
+
+On the budget's page, a status bar explains that the budget won't count in
+**Budget vs Actual** until it's approved, and that editing it withdraws the
+current request. Use **Cancel approval request** to withdraw the request, or
+**View approval** to open it.
+
+<Screenshot src="/images/banking/budget-pending-banner.jpg" alt="Pending approval on the budget page" caption="(1) Pending approval status, (2) status bar, (3) Cancel approval request and View approval." />
+
+The approver reviews the budget from **Approvals**, and can **Approve**,
+**Reject**, or **Reassign** it.
+</Step>
+
+<Step>
+### See the outcome
+- **Approved** — the budget's status changes to **Active**.
+- **Rejected** — the status changes to **Rejected**, and the approver's reason
+  is shown on the budget.
+
+The budget page then shows an **Approval History** section. Select **View as
+decided** to see the budget exactly as it was approved or rejected.
+
+<Screenshot src="/images/banking/budget-approval-history-section.jpg" alt="Approval History on the budget" caption="(1) The decision and approver, (2) View as decided." />
+</Step>
+
+</Steps>
+
+Editing an active budget sends the **change** for approval. The approver sees
+the change on the **Proposed change** tab before deciding.
+
+The budget's **History** section also records each step — for example,
+**Create_budget**, **Submit_budget_for_approval**, **Budget_approved**, and
+**Budget_rejected** — with the user and time.
+
+<Screenshot src="/images/banking/budget-approval-history.jpg" alt="Budget history with approval events" caption="(1) Approval events in the budget's History." />
+
+## Related
+
+Compare budgets with actual amounts in the [Budget vs
+Actual](/docs/reports/budget-vs-actual) report. For how approvals work across
+documents, see [Approval Workflow](/docs/administration/approvals).

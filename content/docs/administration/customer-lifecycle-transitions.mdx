@@ -1,0 +1,99 @@
+---
+title: Customer Lifecycle Transitions
+description: Control who can move records between the Lead, Prospect, Customer, Inactive, and Archived stages.
+---
+
+Customer records move through **lifecycle stages** — from **Lead** to
+**Prospect** to **Customer**, and later to **Inactive** or **Archived**. The
+**Customer Lifecycle Transitions** settings decide who is allowed to make each
+move.
+
+## Open the settings
+
+Go to **Settings → Customer Lifecycle Transitions**. The page has two sections:
+
+- **Lead Statuses Allowed for Lead to Prospect Promotion**
+- **Transition permissions**
+
+<Screenshot src="/images/administration/lifecycle-transitions.jpg" alt="Customer Lifecycle Transitions" caption="(1) Add a status, (2) Explicit Action, (3) Automated Actions, (4) Add Role." />
+
+## Lead statuses allowed for promotion
+
+Only leads in the selected statuses can be promoted from **Lead** to
+**Prospect**.
+
+- Select **Add a status** to add a lead status to the allowed list.
+- Leave the list **empty** to allow promotion from any lead status.
+
+## Transition permissions
+
+The **Transition permissions** table lists each lifecycle transition:
+
+| Transition |
+| --- |
+| Lead → Prospect |
+| Prospect → Customer |
+| Customer → Inactive |
+| Inactive → Archived |
+| Inactive/Archived → Customer (activate) |
+
+For each transition, the table shows:
+
+- **Explicit Action** — the roles allowed to make this transition. If no role is
+  assigned, the row shows **No roles assigned yet**.
+- **Automated Actions** — the automated action that may make this transition on
+  its own.
+
+<Callout type="warn">
+  An automated promotion records its own reason and is **rejected** unless that
+  automated action is selected for the transition here.
+</Callout>
+
+## Assign roles to a transition
+
+<Steps>
+
+<Step>
+### Open Add Role
+On the transition's row, select **Add Role**. The **Add Transition Role** dialog
+opens.
+</Step>
+
+<Step>
+### Choose the application
+Under **Applications**, the application is shown — for example,
+**account-wise**.
+</Step>
+
+<Step>
+### Select roles and access
+Under **Roles & Access**, tick the roles that may perform the transition and set
+each role's **Access Level**:
+
+| Access level | What it allows |
+| --- | --- |
+| **All Records** | Can transition any Lead or Customer record. |
+| **Own Records** | Can transition only Leads and Customers assigned to them. |
+</Step>
+
+<Step>
+### Save
+<Screenshot src="/images/administration/lifecycle-add-role.jpg" alt="Add Transition Role dialog" caption="(1) Application, (2) tick the roles, (3) access level descriptions, (4) Save Roles." width={640} />
+
+Select **Save Roles**. The roles now appear in the **Explicit Action** column
+for that transition. Select **Cancel** to close without changes.
+</Step>
+
+</Steps>
+
+<Callout type="info">
+  "Assigned to them" refers to customer assignments. See [Customer
+  Assignments](/docs/sales/customers/customer-assignments).
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Customer Fields Map" href="/docs/administration/customer-fields-map" />
+  <Card title="Roles & Profiles" href="/docs/administration/roles-and-profiles" />
+</Cards>

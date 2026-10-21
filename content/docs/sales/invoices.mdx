@@ -1,0 +1,202 @@
+---
+title: Invoices
+description: Bill a customer, recognize revenue, and create Accounts Receivable.
+---
+
+An **Invoice** bills a customer for goods or services. When created, AccountWise
+records the journal entry, recognizes revenue, and creates Accounts Receivable.
+
+## How an invoice is created
+
+An invoice can be:
+
+- **Converted from a [Sales Order](/docs/sales/sales-orders)**.
+- **Created directly**, without a sales order — from **Sales → Invoices**, or
+  from a customer's record using **Create Document → Create Invoice**.
+
+<Callout type="info">
+  If a customer clicks **Pay Now** from a sales order email, the system can
+  automatically generate the invoice and complete the related process.
+</Callout>
+
+## The Invoices list
+
+Go to **Sales → Invoices**.
+
+<Screenshot src="/images/sales/invoice-list-annotated.jpg" alt="Invoices list with tabs and filters highlighted" caption="(1) New invoice, (2) status tabs with counts, (3) Customers filter, (4) Start date and End date, (5) Search." />
+
+- **Status tabs** — **All**, **Draft**, **Unpaid**, **Partial**, **Paid**,
+  **Overdue**, and **Void**. Each tab shows how many invoices it contains.
+- **Filters** — filter by **Customers**, **Start date**, and **End date**, or
+  use **Search**.
+- **Columns** — Customer (with the invoice number), Sale Order, Work Order,
+  Invoice Date, Due Date, Quantity, Amount, Paid Amount, Refund Amount, Status,
+  and Actions.
+
+Each row has **View** (eye), **Edit** (pencil), and **Delete** (bin) icons. The
+**See more** menu (**⋮**) offers **Clone**, **Packing Slip**, and **Void**.
+
+<Screenshot src="/images/sales/invoice-row-actions.jpg" alt="Invoice row actions and See more menu" caption="(1) View, Edit, Delete, and See more. (2) The See more menu: Clone, Packing Slip, Void." width={740} />
+
+## Creating an invoice directly
+
+<Steps>
+
+<Step>
+### Open the New invoice form
+Go to **Sales → Invoices** and select **New invoice**.
+</Step>
+
+<Step>
+### Select the customer
+In **Select Customer**, search for and choose the customer. AccountWise then:
+
+- shows the **Customer Balance** at the top right,
+- fills in the **Billing Address** and **Shipping Address** (use the pencil
+  icon to change either one),
+- adds the customer's email to **Email**, and
+- fills in the customer's **Payment Term**.
+
+Enter a **Reference number**, and check **Tax Type** (for example, **Tax
+Exclusive**) and **Discount Type** (for example, **Percentage**).
+
+<Screenshot src="/images/sales/invoice-new-1.jpg" alt="New invoice form — customer, addresses, and header fields" caption="(1) Select Customer, (2) Customer Balance, (3) Billing and Shipping Address, (4) Reference number, (5) Email, (6) Tax Type, (7) Payment Term, (8) Discount Type." />
+</Step>
+
+<Step>
+### Complete the invoice details
+Check the **Invoice Date** and **Shipping Date** (both default to today), and
+optionally choose **Create Shipnest Order**, a **Sales Person**, and a
+**Location**, and add a **Memo**.
+
+The **Online Payment** toggle under **Details** is on by default.
+
+<Screenshot src="/images/sales/invoice-new-2.jpg" alt="New invoice form — dates, sales person, location, and item search" caption="(9) Invoice Date, (10) Create Shipnest Order, (11) Sales Person, (12) Location, (13) Memo, (14) Shipping Date, (15) Online Payment, (16) Search AccountWise Items, (17) Add Item, (18) Add Additional Surcharge." />
+</Step>
+
+<Step>
+### Add items and surcharges
+Use **Search AccountWise Items** to find an item and select **Add Item** next to
+it, or select **Add Item** below the list to add a blank line. For each line,
+complete **Description**, **Part Number** (optional), **Account**,
+**Quantity**, **Rate**, and **Amount**. Use the bin icon to remove a line.
+
+Select **Add Additional Surcharge** to add a surcharge such as shipping or
+delivery charges. Enter any **tax** and **discount**. The **Total Quantity**,
+**Subtotal**, **Discount**, **Tax**, and **Total** update as you go.
+
+<Screenshot src="/images/sales/invoice-new-3.jpg" alt="Invoice item line and totals" caption="(19) An item line, (20) remove the line, (21) tax and discount, (22) totals." />
+</Step>
+
+<Step>
+### Add attachments and terms
+Under **Attachments**, drop files or click **browse** to attach them. Review
+the **Terms and Conditions** text.
+</Step>
+
+<Step>
+### Save
+Select **Save as Draft** to save the invoice as a draft, or **Create & Send**
+to create the invoice and email it to the customer. Select **Cancel** to
+discard it.
+
+<Screenshot src="/images/sales/invoice-new-4.jpg" alt="Invoice attachments, terms, and save buttons" caption="(23) Attachments, (24) Terms and Conditions, (25) Save as Draft, (26) Create & Send." />
+</Step>
+
+</Steps>
+
+AccountWise records the journal entry and creates Accounts Receivable
+automatically.
+
+## Viewing an invoice
+
+Select **View** on a row to open the invoice. The page shows the invoice number
+and status, the printable invoice (company details, Bill To and Ship To, items,
+and totals), **Payment History**, **Bank Details**, **Terms and Conditions**,
+and the collapsible **GL Impact** and **History** sections.
+
+<Screenshot src="/images/sales/invoice-detail-top.jpg" alt="Invoice detail page toolbar" caption="(1) Back, (2) Edit, (3) View, (4) Download, (5) Clone, (6) Send, (7) Mark as Paid, (8) Packing Slip, (9) Refund." />
+
+| Control | What it does |
+| --- | --- |
+| **Back** | Returns to the Invoices list. |
+| **Edit** | Edits the invoice. When the invoice can't be edited, the icon is greyed out and its tooltip reads **Can't Edit**. |
+| **View**, **Download** | View or download the invoice. |
+| **Clone** | Creates a new invoice from this one. |
+| **Send** | Opens **Send Invoice** to email the invoice. |
+| **Mark as Paid** | Records a payment. See below. |
+| **Packing Slip** | Opens the packing slip for the invoice. |
+| **Refund** | Refunds the customer. The tooltip shows the maximum refundable amount. |
+
+### Document status and watermark
+
+The invoice's status is shown in two places:
+
+- **Next to the invoice number** at the top of the page — for example,
+  **Overdue**.
+- **As a watermark** across the middle of the invoice — for example,
+  **OVERDUE**, **PAID**, or **PARTIAL** for a partially paid invoice.
+
+<Screenshot src="/images/sales/invoice-status-badge.jpg" alt="Invoice status next to the invoice number" caption="(1) The status next to the invoice number." />
+
+<Screenshot src="/images/sales/invoice-status-watermark.jpg" alt="Status watermark on the invoice" caption="(1) The status watermark across the invoice." />
+
+The watermark also appears on the **PDF** that is emailed to the customer when
+you send the invoice. The same status display is used on other sales and
+purchase documents — for example, a pending sales order shows **PENDING**, and
+a paid bill shows **PAID**.
+
+### Payment history
+
+The **Payment History** panel lists each payment, credit memo adjustment, and
+refund recorded against the invoice, followed by the **Balance Due**. Select an
+entry to open the related document.
+
+<Screenshot src="/images/sales/invoice-payment-history.jpg" alt="Invoice Payment History" caption="(1) Payments and credit memo adjustments, (2) refunds, (3) Balance Due." width={740} />
+
+<Screenshot src="/images/sales/invoice-gl-history.jpg" alt="GL Impact and History sections" caption="Expand (1) GL Impact to see the journal entry and (2) History to see changes to the invoice." />
+
+### Send an invoice
+
+Select the **Send** icon. In **Send Invoice**, check the **Email** recipients,
+**Subject**, and **Body**, then select **Send**.
+
+<Screenshot src="/images/sales/invoice-send-dialog.jpg" alt="Send Invoice dialog" caption="(1) Email recipients, (2) Subject, (3) Body, (4) Send." width={760} />
+
+## Recording payment
+
+Select **Mark as Paid** on the invoice. The **Mark Invoice as Paid** dialog
+shows the invoice number, **Total Amount**, and **Remaining Amount**. Enter the
+**Amount**, **Payment Method**, **Payment Account**, and **Payment Date**,
+optionally attach files, and select **Mark as Paid**.
+
+<Screenshot src="/images/sales/invoice-mark-paid.jpg" alt="Mark Invoice as Paid dialog" caption="(1) Invoice summary, (2) Amount, (3) Payment Method, (4) Payment Account, (5) Payment Date, (6) Mark as Paid." />
+
+You can also record payments from **Invoice Receipts**. See [Invoice
+Receipts](/docs/sales/invoice-receipts).
+
+## Refunding from an invoice
+
+Select **Refund** on the invoice. In **Process Refund**, enter the **Refund
+Amount**, choose the **Refund Account**, add a **Reason**, and select **Process
+Refund**. See [Refund Receipts](/docs/sales/refund-receipts).
+
+<Screenshot src="/images/sales/invoice-refund-dialog.jpg" alt="Process Refund dialog" caption="(1) Refund Amount, (2) Refund Account, (3) Reason, (4) Process Refund." width={760} />
+
+## Approvals
+
+Invoices support the [approval workflow](/docs/administration/approvals). When
+approvals are turned on for invoices, saving an invoice opens **Submit for
+Approval**, and the invoice doesn't take effect until it is approved. While it
+waits, a status bar on the invoice shows that it is pending approval. After
+approval, the invoice moves to its normal status — for example, **Unpaid**.
+The invoice page then shows an **Approval History** section.
+
+## Related
+
+<Cards>
+  <Card title="Invoice Receipts" href="/docs/sales/invoice-receipts" />
+  <Card title="Credit Memos" href="/docs/sales/credit-memos" />
+  <Card title="Refund Receipts" href="/docs/sales/refund-receipts" />
+  <Card title="Voiding Sales Documents" href="/docs/sales/voiding-sales-documents" />
+</Cards>

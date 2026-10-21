@@ -1,0 +1,59 @@
+---
+title: Organization
+description: View the organizations served by your AccountWise deployment and their stored settings.
+---
+
+The **Organization** page lists the organizations served by this AccountWise
+deployment.
+
+## Open the Organization page
+
+Go to **Settings → Organization**.
+
+<Screenshot src="/images/administration/organization-list.jpg" alt="Organization list" caption="(1) Copy the Organization ID, (2) View settings." />
+
+The list shows:
+
+| Column | What it shows |
+| --- | --- |
+| Organization Name | The organization's short name, with its full name underneath. |
+| Organization ID | The unique ID, with a copy button. |
+| Data Provider | The system that provides the organization's data — for example, **AccountWise**. |
+| Version | The application version the organization is on. |
+| Created | When the organization was created, and when it was last updated. |
+| Actions | The **view** (eye) icon. |
+
+## View an organization's settings
+
+Select the **view** (eye) icon on a row to open **Organization Settings**. This
+shows the settings stored for that organization.
+
+- The settings are **read-only** in this view.
+- Use the search box to find keys and values.
+- Switch between the **Tree** and **Raw** views. In the Tree view, use **Expand
+  all** and **Collapse all**, and copy a single value or branch.
+- Select **Copy JSON** to copy the settings.
+- Sensitive values, such as integration credentials, are **hidden**, and the
+  page shows how many are hidden. The copy and raw views follow this setting.
+
+Select **Close** to return to the list.
+
+## Organization details and the identity provider
+
+The organization's details are retrieved from the identity provider (IAM). When
+the **Edit details** action is available to you on an organization, it opens
+**Edit Organization Details**. Select **Save Changes** to save. The changes are
+saved in the identity provider too, and any change made in the identity
+provider also appears in AccountWise.
+
+<Callout type="info">
+  **Edit details** is only shown to users with permission to edit the
+  organization.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Users" href="/docs/administration/users" />
+  <Card title="Locations" href="/docs/administration/locations" />
+</Cards>

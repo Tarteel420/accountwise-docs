@@ -1,0 +1,125 @@
+---
+title: Creating Customers
+description: Add a new customer with its primary information, addresses, profile, and contacts.
+---
+
+New customers are created from the **Create a new commercial customer** form.
+
+## Create a customer
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Customers Management → Customers** and select **New customer** in the
+top-right corner.
+
+<Screenshot src="/images/sales/customers/customer-list-annotated.jpg" alt="Customers list with New customer highlighted" caption="Select New customer (1) to open the form." />
+</Step>
+
+<Step>
+### Enter primary information
+Under **Primary information**, enter the **Customer name**. **Type** is set to
+**Commercial**, and **Status** defaults to **Customer**. You can also enter:
+
+- **Parent company**
+- **Lead source**
+- **Competitor**
+- **Doing Business As (DBA)**
+- **Business unit**
+- **Sales rep**
+- **EPA #**
+- **Website**
+
+Turn on any of the toggles that apply: **Send statement**, **Cooperate
+customer**, **Opportunity for old customer**, **Send COR with invoice**, **R2
+Certified**, **Bill root parent**, and **Create as vendor**.
+
+<Screenshot src="/images/sales/customers/new-customer-primary.jpg" alt="Primary information section of the new customer form" caption="(1) Customer name, (2) Type, (3) Status, (4) Business unit, (5) customer toggles, (6) Doing Business As (DBA)." />
+</Step>
+
+<Step>
+### Enter the addresses
+Under **Addresses**, complete the **Shipping** and **Billing** addresses —
+**Address Line 1**, **Address Line 2**, **City**, **State**, **Zip Code**, and
+**Country**. If both addresses are the same, fill in one and select **Copy
+Billing address** (on the shipping side) or **Copy Shipping address** (on the
+billing side).
+
+<Screenshot src="/images/sales/customers/new-customer-addresses.jpg" alt="Addresses section with copy buttons" caption="(1) Shipping address fields, (2) Copy Billing address, (3) Copy Shipping address." />
+
+<Callout type="info">
+  **Zip Code** and **State** are optional for countries other than the **USA**.
+  You can save a customer with an address outside the USA that has no zip code
+  or state, and you can create sales documents for that customer as normal.
+  Your administrator controls this in the [Customer Fields
+  Map](/docs/administration/customer-fields-map).
+</Callout>
+</Step>
+
+<Step>
+### Enter profile information
+Under **Profile information**, set the **Payment Method** and **Payment Term**.
+Turn on **Requires P.O #** if the customer needs a purchase order number, then
+enter the **P.O #** and **PO Expiry**. You can also enter:
+
+- **Feet** and **Inches** (Clearance Height)
+- **Starting hours** and **Ending hours**
+- **Branches**
+- **Additional surcharges**
+- **Guaranteed destruction**
+- **Tags**
+
+<Screenshot src="/images/sales/customers/new-customer-profile.jpg" alt="Profile information and Contacts sections" caption="(1) Requires P.O #, (2) Payment Method and Payment Term, (3) Additional surcharges, Guaranteed destruction, and Tags, (4) Add Contact." />
+</Step>
+
+<Step>
+### Add contacts
+Under **Contacts**, select **Add Contact**. In **Add Contact details**, enter the
+**Contact type**, **First name**, **Email**, and **Phone #**. **Last name**,
+**Title**, **Mobile #**, and **Extension** are optional. Select **Add**. Repeat
+for each contact.
+
+<Screenshot src="/images/sales/customers/add-contact.jpg" alt="Add Contact details dialog" caption="The Add Contact details dialog. Select Add (1) to add the contact to the customer." width={760} />
+</Step>
+
+<Step>
+### Save
+Select **Save** at the bottom of the form to create the customer, or **Cancel**
+to discard it.
+
+<Screenshot src="/images/sales/customers/new-customer-save.jpg" alt="Save and Cancel buttons at the bottom of the form" caption="Select Save (5) to create the customer." />
+</Step>
+
+</Steps>
+
+<Callout type="info">
+  Which fields are required on this form is set by your administrator in the
+  [Customer Fields Map](/docs/administration/customer-fields-map). Fields marked
+  with an asterisk (*) must be filled in before you can save.
+</Callout>
+
+## Customer options
+
+| Option | What it does |
+| --- | --- |
+| Parent company | Links the customer to a parent customer. The relationship appears in the **Hierarchy** column and on the parent's **Sub Customers** tab. |
+| Bill root parent | Enables bill-to-parent behavior. |
+| Create as vendor | Treats the customer as a vendor too. |
+| Send statement | Emails the customer a report of outstanding invoices and credit memos every two weeks (configuration based). |
+| R2 Certified | Flags whether the customer is R2 certified; visible in customer details. |
+
+## Assigning a salesperson
+
+Select the **Sales rep** on the form, or assign the customer later from
+[Customer Assignments](/docs/sales/customers/customer-assignments). Once
+assigned, that salesperson can only see their own assigned customers and related
+documents. See [User Roles](/docs/getting-started/user-roles).
+
+## Related
+
+<Cards>
+  <Card title="Customer Details" href="/docs/sales/customers/customer-details" />
+  <Card title="Activities & Notes" href="/docs/sales/customers/activities-and-notes" />
+  <Card title="Customer Assignments" href="/docs/sales/customers/customer-assignments" />
+</Cards>

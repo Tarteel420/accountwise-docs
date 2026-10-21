@@ -1,0 +1,56 @@
+---
+title: Voiding Sales Documents
+description: Void invoices and sales orders, reversing their journal entries.
+---
+
+Voiding cancels a sales document and **reverses all of its related journal
+entries**.
+
+<Callout type="warn">
+  Void is **configuration based** — not everyone has the option to void.
+</Callout>
+
+## What can be voided
+
+- **Invoices** — only **unpaid** invoices can be voided.
+- **Sales Orders.**
+
+<Callout type="info">
+  When an invoice was converted from a sales order and you void the invoice, the
+  originating sales order is voided too.
+</Callout>
+
+## Void an invoice
+
+<Steps>
+
+<Step>
+### Open the See more menu
+Go to **Sales → Invoices**. On the invoice's row, open the **See more** menu
+(**⋮**) and select **Void**.
+
+<Screenshot src="/images/sales/invoice-row-actions.jpg" alt="See more menu with Void" caption="The See more menu (2) on an invoice row includes Void." width={740} />
+</Step>
+
+<Step>
+### Enter the reason and confirm
+The **Confirm Void** dialog asks you to confirm — this action cannot be undone.
+Enter the **Reason** and select **Void Invoice**, or **Cancel** to keep the
+invoice.
+
+<Screenshot src="/images/sales/invoice-void-dialog.jpg" alt="Confirm Void dialog" caption="(1) Enter the void reason. (2) Select Void Invoice." width={760} />
+</Step>
+
+</Steps>
+
+Voided invoices appear under the **Void** tab of the Invoices list.
+
+## Void reason
+
+When voiding, you must add a **void reason**. It is included in the email sent
+to the customer.
+
+## Related
+
+The purchase side has an equivalent flow. See [Voiding Purchase
+Documents](/docs/purchases/voiding-purchase-documents).

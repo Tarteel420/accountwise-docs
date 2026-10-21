@@ -1,0 +1,63 @@
+---
+title: Key Concepts
+description: The core ideas that the rest of AccountWise relies on.
+---
+
+AccountWise is built on a small set of ideas. Understanding these makes every
+module easier to use.
+
+## Chart of Accounts
+
+The **Chart of Accounts** is the backbone of the system. It is organized into
+five primary account types:
+
+| Account Type | What it represents |
+| --- | --- |
+| Assets | What the business owns |
+| Liabilities | What the business owes |
+| Equity | The owner's stake in the business |
+| Revenue | Income the business earns |
+| Expense | Costs the business incurs |
+
+Every transaction eventually posts to one or more of these accounts. See
+[Chart of Accounts](/docs/accounting/chart-of-accounts) for details.
+
+## Journal entries
+
+A **journal entry** is the record of debits and credits behind a transaction.
+AccountWise creates these automatically when you record sales and purchases, so
+your books stay balanced without manual work. See [Journal
+Entries](/docs/accounting/journal-entries).
+
+## Documents
+
+Most of your work in AccountWise happens through **documents** — invoices,
+sales orders, bills, purchase orders, receipts, and so on. Documents share
+common behaviors:
+
+- Many can be **cloned** to save time.
+- Listing pages can be **filtered** (for example, by customer or vendor).
+- Every document shows its **History** and **GL Impact** at the bottom.
+
+<Callout type="info">
+  "GL Impact" means General Ledger impact — the journal entry the document
+  created. You can review it on any document to see exactly how it affected your
+  accounts.
+</Callout>
+
+## The sales and purchase cycles
+
+Business activity flows through two mirrored cycles:
+
+- The **sales cycle** starts with a customer and ends with money received.
+- The **purchase cycle** starts with a vendor and ends with money paid.
+
+See [The AccountWise Workflow](/docs/getting-started/the-accountwise-workflow)
+for the full picture.
+
+## What's next
+
+<Cards>
+  <Card title="User Roles" href="/docs/getting-started/user-roles" />
+  <Card title="The AccountWise Workflow" href="/docs/getting-started/the-accountwise-workflow" />
+</Cards>

@@ -1,0 +1,58 @@
+---
+title: Bank Transfers
+description: Record transfers of money between accounts.
+---
+
+A **Bank Transfer** records money moved from one account to another. AccountWise
+posts the journal entry to the General Ledger automatically.
+
+## The Bank Transfers list
+
+Go to **Banking → Bank Transfers**.
+
+<Screenshot src="/images/banking/transfer-list-annotated.jpg" alt="Bank Transfers list" caption="(1) New Transfer, (2) Start Date and End Date filters, (3) Search transfers." />
+
+The list shows the **From Account** (with the transfer number), **To Account**,
+**Date**, **Location**, **Description**, and **Amount**. Select a row to open
+the transfer.
+
+## Creating a transfer
+
+<Steps>
+
+<Step>
+### Open the form
+On the Bank Transfers page, select **New Transfer**.
+</Step>
+
+<Step>
+### Choose the accounts
+Select the account the money leaves in **Transfer From** and the account it
+goes to in **Transfer To**. Each account is shown with its type, for example
+**(Asset)**.
+</Step>
+
+<Step>
+### Enter the amount and date
+Enter the **Transfer Amount**. The **Date** defaults to today; change it if
+needed. Optionally choose a **Location** and enter a **Memo**.
+
+<Screenshot src="/images/banking/transfer-new.jpg" alt="New Transfer form" caption="(1) Transfer From, (2) Transfer To, (3) Transfer Amount, (4) Date, (5) Location, (6) Memo." />
+</Step>
+
+<Step>
+### Attach files and save
+Optionally drop files under **Attachments** or click **browse** to add them.
+Select **Create Transfer**, or **Cancel** to discard the transfer.
+</Step>
+
+</Steps>
+
+## Viewing a transfer
+
+Select a transfer in the list to open its details.
+
+<Screenshot src="/images/banking/transfer-detail.jpg" alt="Bank transfer details" caption="(1) Back, (2) Transfer #, Date, Amount, and Location, (3) From Account and To Account, (4) GL Impact." />
+
+Expand **GL Impact** to see the journal entry: the **Transfer From** account is
+credited and the **Transfer To** account is debited for the transfer amount.

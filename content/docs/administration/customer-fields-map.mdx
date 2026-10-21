@@ -1,0 +1,93 @@
+---
+title: Customer Fields Map
+description: Choose which customer profile fields are required, optional, or conditionally required.
+---
+
+The **Customer Fields Map** controls which fields must be filled in when a
+customer is created or edited. It applies to the customer profile form described
+in [Creating Customers](/docs/sales/customers/creating-customers).
+
+## Open the Customer Fields Map
+
+Go to **Settings → Customer Fields Map**. The **Customer Profile Fields** table
+lists every customer field with its **Required?** setting. The selected setting
+is highlighted in green.
+
+<Screenshot src="/images/administration/customer-fields-map-1.jpg" alt="Customer Profile Fields" caption="(1) Fixed settings are greyed out and can't be changed, (2) select Optional or Required for a field." />
+
+## Field settings
+
+Each field can be set to one of the following:
+
+| Setting | What it means |
+| --- | --- |
+| **Optional** | The field can be left empty. |
+| **Required** | The field must be filled in. |
+| **Conditionally Required** | Available for **State** and **Zip Code**. The field is required only when the address country is the one selected here, and optional everywhere else. |
+
+<Callout type="info">
+  Some settings are fixed and cannot be changed. **Name** is always required,
+  and **Parent customer** is always optional.
+</Callout>
+
+## Fields you can configure
+
+**Primary information**
+
+- Name, Parent customer, Status, Business unit, Lead source, EPA, Website,
+  Competitor, Sales rep, Payment term, Payment method, Doing Business As (DBA)
+
+**Shipping address** and **Billing address** (each configured separately)
+
+- Address Line 1, Address Line 2, City, State, Zip Code, Country
+- Starting hours, Ending hours, and Clearance height (shipping address)
+
+When **Shipping address** or **Billing address** is set to **Required**, its
+**Address Line 1**, **City**, and **Country** are fixed as **Required** and are
+greyed out.
+
+<Screenshot src="/images/administration/customer-fields-map-2.jpg" alt="Address field settings" caption="(1) Shipping address set to Required, (2) fixed sub-fields are greyed out, (3) Conditionally Required for State and Zip Code." />
+
+<Callout type="info">
+  Some address rules apply only when an address is provided — for example, a
+  setting may apply only when a shipping address is entered.
+</Callout>
+
+**Contacts**
+
+- The **Contacts** setting controls its six dependent fields: First name, Last
+  name, Title, Email, Phone number, and Mobile number.
+
+**Other**
+
+- Additional surcharges, Branches, Guaranteed destructions
+
+## Update the field settings
+
+<Steps>
+
+<Step>
+### Choose a setting for each field
+For each field, select **Optional**, **Required**, or — for State and Zip Code
+— **Conditionally Required**.
+
+For example, set **State** and **Zip Code** to **Conditionally Required** with
+the country **USA** to require them for US addresses only. Customers in other
+countries can then be saved without a zip code or state, and sales documents
+can be created for them as normal.
+</Step>
+
+<Step>
+### Save or discard
+Select **Save** to apply your changes. A confirmation appears when the customer
+profile fields are saved. Select **Discard** to undo unsaved changes.
+</Step>
+
+</Steps>
+
+## Related
+
+<Cards>
+  <Card title="Creating Customers" href="/docs/sales/customers/creating-customers" />
+  <Card title="Customer Lifecycle Transitions" href="/docs/administration/customer-lifecycle-transitions" />
+</Cards>

@@ -1,0 +1,141 @@
+---
+title: Fixed Asset Categories
+description: Group fixed assets into categories with default depreciation settings and accounts.
+---
+
+**Fixed Asset Categories** group related fixed assets — for example,
+**Vehicles** or **Machinery** — and store the depreciation settings and
+accounts they share. When you create an asset and choose a category, its
+depreciation details are filled in for you.
+
+<Callout type="info">
+  Categories are **flat** — there are no sub-categories.
+</Callout>
+
+## The Fixed Assets Categories list
+
+Go to **Fixed Assets Management → Fixed Assets Categories** in the sidebar.
+
+<Screenshot src="/images/banking/asset-categories-list-annotated.jpg" alt="Fixed Assets Categories list" caption="(1) New category, (2) status tabs, (3) Search, (4) method and asset account filters, (5) summary, (6) Active toggle, (7) Next step, (8) row menu." />
+
+- **Tabs** — **All**, **Active**, **Inactive**, and **Unused** (categories with
+  no assets), each with a count.
+- **Filters** — **Search** by name, description, method, or account, and filter
+  by method (**All methods**) and asset account (**All asset accounts**).
+- **Summary** — the number of categories, assets in service, assets without a
+  category, the total net book value (**NBV**), and this month's depreciation
+  posting.
+
+Each row shows:
+
+| Column | What it shows |
+| --- | --- |
+| **Category** | The category name, with its method and useful life (or rate). |
+| **Asset account** | The balance sheet account that holds the cost of the assets. |
+| **Assets** | How many assets are in the category. |
+| **NBV** | The total net book value of the category's assets. |
+| **Posting** | This month's depreciation amount for the category (the column is headed with the current month, for example **Oct posting**). |
+| **Active** | Turn the category on or off. |
+| **Next step** | The suggested next action — for example, **+ Asset** to add an asset to the category, or **Not posted** when this month's depreciation hasn't been posted yet. |
+
+Assets that don't belong to a category are listed as **No category**, with an
+**Assign** action in the **Next step** column.
+
+## Creating a category
+
+<Steps>
+
+<Step>
+### Open the form
+On the Fixed Assets Categories page, select **New category**. The **New
+category** panel opens.
+</Step>
+
+<Step>
+### Name the category and choose the method
+Enter a **Name** (required) and an optional **Description**. Then choose the
+**Method**:
+
+| Method | How it works | Required field |
+| --- | --- | --- |
+| **Straight line** | The same amount is charged every month. | **Useful life (years)** — between 1 and 50 years. |
+| **Declining balance** | A rate is applied to the remaining book value each month, so the charge is based on the asset's net book value. | **Depreciation rate (%)** — between 1% and 100%. |
+
+Next to the method, the panel shows how many existing categories use it.
+
+<Screenshot src="/images/banking/asset-category-new-1.jpg" alt="New category — name and method" caption="(1) Name, (2) Description, (3) Method, (4) Useful life (years), (5) Residual value (%)." width={560} />
+
+<Screenshot src="/images/banking/asset-category-new-declining.jpg" alt="New category — Declining balance" caption="With (1) Declining balance selected, enter the (2) Depreciation rate (%)." width={560} />
+</Step>
+
+<Step>
+### Set the residual value
+**Residual value (%)** is the value you expect the asset to have at the end of
+its life, as a percentage of its cost. It defaults to **0**, which means the
+asset is fully depreciated at the end of its life.
+</Step>
+
+<Step>
+### Choose the accounts
+All five accounts are required:
+
+| Account | Purpose |
+| --- | --- |
+| **Asset account** | A balance sheet asset account that holds the cost of the asset. |
+| **Depreciation account** | An expense account that the monthly depreciation entry is posted to. |
+| **Accumulated depreciation account** | A balance sheet account that collects the depreciation to date. |
+| **Write-off account** | An expense account used when an asset is disposed of. |
+| **Write-down account** | An expense account used to reduce the value of an asset while it is still depreciating. |
+
+The **Example** box shows how the settings work out — for example, *On
+$12,400.00: $206.67 a month for 60 months*. Enter a life or rate to see it.
+
+<Screenshot src="/images/banking/asset-category-new-2.jpg" alt="New category — accounts and example" caption="(1) Asset account, (2) Depreciation account, (3) Accumulated depreciation account, (4) Write-off account, (5) Write-down account, (6) Example, (7) Create category." width={560} />
+</Step>
+
+<Step>
+### Save
+Select **Create category**, or **Cancel** to close the panel. The new category
+appears in the list as active, with **0** assets.
+</Step>
+
+</Steps>
+
+## Managing a category
+
+Open the row menu (**⋮**) on a category:
+
+<Screenshot src="/images/banking/asset-categories-row-menu.jpg" alt="Category row menu" caption="(1) Not posted — this month's depreciation hasn't been posted yet. (2) The row menu." />
+
+| Action | What it does |
+| --- | --- |
+| **Edit** | Opens the category to change its settings. |
+| **Duplicate** | Creates a new category from this one. |
+| **Deactivate** | The category won't be used for new assets. Assets already on it stay on it. Deactivated categories can be turned back on with **Reactivate**. |
+| **Delete** | Deletes the category. The option is greyed out for a category that has assets. |
+
+You can also turn a category on or off with the **Active** toggle.
+
+### Editing a category
+
+Changes to a category apply to **new assets only**. Assets already in service
+keep their current method, useful life, and accounts. The **What will happen**
+box in the edit panel confirms this, and shows how many assets are affected.
+
+<Screenshot src="/images/banking/asset-category-edit.jpg" alt="Edit category — What will happen" caption="(1) What will happen when you save the changes." width={560} />
+
+Select **Save changes**, or **Cancel**.
+
+## Using a category on an asset
+
+When you [create a fixed asset](/docs/banking/fixed-assets#creating-an-asset),
+choose the **Category**. The depreciation method, useful life, depreciation
+account, and accumulated depreciation account are filled in from the category.
+You can still change them for that asset.
+
+## Related
+
+<Cards>
+  <Card title="Fixed Assets" href="/docs/banking/fixed-assets" />
+  <Card title="Chart of Accounts" href="/docs/accounting/chart-of-accounts" />
+</Cards>

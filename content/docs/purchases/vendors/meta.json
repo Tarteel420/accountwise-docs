@@ -1,0 +1,10 @@
+{
+  "title": "Vendors",
+  "icon": "Building2",
+  "pages": [
+    "index",
+    "creating-vendors",
+    "vendor-details",
+    "notes-and-activities"
+  ]
+}

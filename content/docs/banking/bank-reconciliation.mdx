@@ -1,0 +1,147 @@
+---
+title: Bank Reconciliation
+description: Match your bank statement against the transactions recorded in AccountWise.
+---
+
+**Bank Reconciliation** matches your bank statement with the transactions
+recorded in AccountWise, so that the adjusted balance in your books agrees with
+the statement ending balance.
+
+## Reconciliation History
+
+Go to **Banking → Bank Reconciliation**. The **Reconciliation History** page
+lists every reconciliation.
+
+<Screenshot src="/images/banking/reconciliation-list-annotated.jpg" alt="Reconciliation History" caption="(1) New Reconciliation, (2) All, Draft, and Completed tabs, (3) Filter by Account, (4) Search, (5) row actions." />
+
+- **Tabs** — **All**, **Draft**, and **Completed**, each with a count.
+- **Columns** — Account Name (with the reconciliation number and account type),
+  Reconciliation Date, Statement Ending Date, Statement Ending Balance, Ledger
+  Balance, Status, and Actions.
+- **Actions** — **View** (eye), **Edit** (pencil), **Export**, and **Delete**
+  (bin). A completed reconciliation can't be edited or deleted; the tooltips
+  read **Cannot edit completed reconciliation** and **Cannot delete completed
+  reconciliation**.
+
+## Starting a reconciliation
+
+<Steps>
+
+<Step>
+### Open the form
+On the Reconciliation History page, select **New Reconciliation**.
+</Step>
+
+<Step>
+### Choose the account
+In **Which account do you want to reconcile?**, select the **Account**.
+AccountWise then shows the date of the last statement for that account (for
+example, **Last statement ending 06/18/2026**) and how many uncleared
+transactions are available for reconciliation.
+
+<Screenshot src="/images/banking/reconciliation-new-1.jpg" alt="Choose the account to reconcile" caption="(1) Account, (2) last statement ending date, (3) uncleared transactions available." />
+</Step>
+
+<Step>
+### Upload the bank statement (optional)
+Under **Upload Bank Statement (Optional)**, drag and drop your bank statement
+CSV file or select **Browse Files**. Uploaded statement lines are matched
+automatically with your ledger entries. Only CSV files are supported, up to
+10 MB. Select **Download Template** to get the CSV layout to use.
+</Step>
+
+<Step>
+### Enter the statement balances
+The **Beginning Balance** is filled in from the previous reconciliation of the
+account. Enter the **Statement Ending Balance** from your bank statement and
+check the **Statement Ending Date** (it defaults to today).
+
+<Screenshot src="/images/banking/reconciliation-new-2.jpg" alt="Upload bank statement and statement balances" caption="(4) Upload Bank Statement CSV, (5) Download Template, (6) Beginning Balance, (7) Statement Ending Balance, (8) Statement Ending Date." />
+</Step>
+
+<Step>
+### Start reconciling
+Select **Start Manual Reconciling**. The button is available once the required
+fields are complete.
+</Step>
+
+</Steps>
+
+## Reconciling transactions
+
+The reconciliation page shows the account and ending date, a balance summary,
+and instructions.
+
+<Screenshot src="/images/banking/reconciliation-workspace-1.jpg" alt="Reconciliation page" caption="(1) Account and Ending Date, (2) Ledger Balance, Statement Ending Balance, Adjusted Balance, Unpresented Transactions, Uncleared Transactions, and Difference, (3) Instructions." />
+
+<Steps>
+
+<Step>
+### Tick the reconciled transactions
+Under **Transactions to Reconcile**, tick **Reconciled** for each transaction
+that appears on your bank statement. Use the **All**, **Payments**, and
+**Deposits** tabs to filter the list. The table shows the **Date**, **Cleared
+Date**, **Description**, **Type**, **Debit**, and **Credit**.
+
+Transactions that were matched automatically from the uploaded statement have a
+green left border and a **Matched** badge. You can tick or untick any
+transaction, whether or not it was matched automatically.
+</Step>
+
+<Step>
+### Check the difference
+As you tick transactions, the summary updates:
+
+- **Unpresented transactions** are credit transactions (payments you've made)
+  recorded in your books but not yet cleared by the bank.
+- **Uncleared transactions** are debit transactions (money received) recorded
+  in your books but not yet processed by the bank.
+- **Adjusted Balance** = Ledger Balance + Unpresented Transactions − Uncleared
+  Transactions.
+
+The goal is a **Difference** of **$0.00** between the statement ending balance
+and the adjusted balance.
+</Step>
+
+<Step>
+### Save
+In the **Reconciliation Summary**, select **Save Reconciliation** to complete
+the reconciliation, or **Save as Draft** to finish it later. Select **Back to
+Setup** to return to the previous step.
+
+<Screenshot src="/images/banking/reconciliation-workspace-3.jpg" alt="Reconciliation Summary and save buttons" caption="(1) Reconciliation Summary, (2) Back to Setup, (3) Save as Draft, (4) Save Reconciliation." />
+</Step>
+
+</Steps>
+
+To continue a draft, open the **Draft** tab and select **Edit** on its row.
+
+## Viewing a completed reconciliation
+
+Select **View** on a row to open the reconciliation.
+
+<Screenshot src="/images/banking/reconciliation-view.jpg" alt="Completed reconciliation" caption="(1) Account Name, dates, Reconciliation Status, Reconciliation Number, and Description, (2) Export, (3) Reconciliation Summary." />
+
+The page shows:
+
+- **Reconciliation Summary** — Statement Ending Balance, Balance as per Books,
+  Balance as per Bank Statement, Adjusted Balance as per Books, Uncleared
+  Transactions Sum, and Unpresented Transactions Sum.
+- **Reconciled Transactions** — each transaction with its **Match Status**
+  (**Manual** or **Matched**).
+- **Unpresented Transactions** and **Uncleared Transactions** left over at the
+  time of reconciliation.
+- **History** of the reconciliation.
+
+Select **Export** to download the reconciliation.
+
+<Callout type="info">
+  You can also review an account's transactions in the [General
+  Ledger](/docs/reports/ledger-reports) by filtering on the bank account.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Reconciliation Rules" href="/docs/banking/reconciliation-rules" />
+</Cards>

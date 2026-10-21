@@ -1,0 +1,134 @@
+---
+title: Journal Entries
+description: How AccountWise records debits and credits behind every transaction, and how to create manual entries.
+---
+
+A **journal entry** records the debit and credit behind a transaction.
+
+## Automatic entries
+
+Journal entries are created **automatically** whenever a financial transaction
+occurs — for example, during a sale or a purchase. The system records the debit
+and credit entries in the background, so your books stay balanced.
+
+## The Journal Entries list
+
+Go to **Journal Entries** in the sidebar. The list shows each entry's
+**Transaction Date**, **Journal Entry Number**, **Description**, **Amount**, and
+**Status**.
+
+<Screenshot src="/images/accounting/je-list-status.jpg" alt="Journal Entries list with status tabs and filters highlighted" caption="(1) New Journal Entry, (2) Export and Import, (3) status tabs, (4) Start date and End date, (5) Search, (6) Status, (7) row actions." />
+
+- Use the tabs to filter entries by status. Each tab shows a count:
+  **All**, **Posted**, **Pending approval**, **Rejected**, and **Draft**.
+- Use **Start date** and **End date** to show entries within a date range.
+- Use **Search** to find an entry.
+- Use the row icons to **View**, **Edit**, or **Delete** an entry. The row menu
+  (**⋮**) has **Clone**, to copy the entry into a new one.
+- Use **Export** to export the list, or **Import** to bulk import entries.
+
+| Status | Meaning |
+| --- | --- |
+| **Posted** | The entry has been posted to the ledger. |
+| **Pending approval** | The entry, or a change to it, is waiting for approval. |
+| **Rejected** | The approver rejected the entry. |
+| **Draft** | The entry has not been posted — for example, after an approval request is withdrawn. |
+
+## Manual entries
+
+If an adjustment or correction is needed, you can **manually create** a journal
+entry to balance or rectify a transaction.
+
+<Steps>
+
+<Step>
+### Open the Create Journal Entry form
+On the Journal Entries page, select **New Journal Entry**. The **Create Journal
+Entry** dialog opens.
+</Step>
+
+<Step>
+### Enter the date and description
+Set the **Transaction Date** (today's date is filled in by default) and enter an
+optional **Description**.
+</Step>
+
+<Step>
+### Add transaction lines
+Under **Transactions**, complete a line for each account affected:
+
+| Field | Notes |
+| --- | --- |
+| Account | The account to post to. Required. |
+| Debit | The debit amount. |
+| Credit | The credit amount. |
+| Customer/Vendor | Optional. Tag the line to a customer or vendor. |
+| Location | Optional. |
+| Description | Optional line description. |
+
+Two lines are shown to start with. Use the bin icon to remove a line. The
+**Total** row adds up the debit and credit columns.
+
+<Screenshot src="/images/accounting/je-create-1.png" alt="Create Journal Entry dialog — date, description, and transaction lines" caption="(1) Transaction Date, (2) Description, (3) transaction lines, (4) debit and credit totals." />
+</Step>
+
+<Step>
+### Add more lines and attachments
+Select **Add Transaction** to add another line. Under **Attachments**, drag
+files into the drop area or click **browse** to attach supporting documents.
+
+<Screenshot src="/images/accounting/je-create-2.png" alt="Create Journal Entry dialog — Add Transaction and Attachments" caption="(5) Add Transaction adds another line. (6) Drop or select files to attach." />
+</Step>
+
+<Step>
+### Balance and save
+Total debits must equal total credits. Select **Create Journal Entry** to save,
+or **Cancel** to discard the entry.
+</Step>
+
+</Steps>
+
+## Approvals for manual entries
+
+Manual journal entries support the [approval
+workflow](/docs/administration/approvals). When your organization turns on
+**Requires Approval** for **Journal Entry** (under the **Accounting** tab
+in **Settings → Approval Policy**):
+
+- Saving a new or edited entry opens **Submit for Approval**. Add a note —
+  required or optional, depending on the policy — and select **Submit**.
+- The entry is saved as **Pending approval** and is not posted until it is
+  approved. After approval, it is **Posted**; if rejected, it shows
+  **Rejected**.
+- While the request is open, you can withdraw it with **Cancel approval
+  request**. The approver is notified and the entry goes back to **Draft**,
+  where you can edit it or submit it again.
+
+## Viewing a journal entry
+
+Select the **View** (eye) icon on a row to open the **Journal Entry Details**
+page. It shows:
+
+- **Transaction Date**, **Description**, **Status**, and **Created At**.
+- **Transactions** — each line's Account, Description, Customer, Vendor,
+  Location, Debit, and Credit, with totals.
+- **Attachments** — attached files, each with a download icon.
+- **GL Impact** and **History** — collapsible sections. The number badge shows
+  how many rows each section contains.
+
+<Screenshot src="/images/accounting/je-detail.png" alt="Journal Entry Details page" caption="The Journal Entry Details page." />
+
+<Screenshot src="/images/accounting/je-gl-impact.png" alt="GL Impact section expanded" caption="The expanded GL Impact section — the date, account, location, and debit or credit posted to each account." />
+
+<Callout type="info">
+  You can review the journal entry behind any document using the **GL Impact**
+  section on that document. See [Key
+  Concepts](/docs/getting-started/key-concepts).
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Chart of Accounts" href="/docs/accounting/chart-of-accounts" />
+  <Card title="General Ledger" href="/docs/reports/ledger-reports" />
+</Cards>

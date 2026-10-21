@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "index",
+    "getting-started",
+    "dashboards",
+    "accounting",
+    "sales",
+    "purchases",
+    "banking",
+    "reports",
+    "administration",
+    "resources"
+  ]
+}

@@ -1,0 +1,184 @@
+---
+title: Roles & Profiles
+description: How role-based access controls what each user can do.
+---
+
+User Management has three sections: **Users**, **Roles**, and **Profiles**.
+Role-based access ensures users only see and act where relevant to their
+responsibilities.
+
+## Roles & Permissions
+
+Roles and permissions are managed from inside AccountWise — you don't need to
+open the separate identity (IAM) application. Go to **Settings → Role &
+Permission**. The page lists the roles your organization can assign in
+AccountWise.
+
+<Callout type="info">
+  **Role & Permission** is only shown to users with access to role
+  management.
+</Callout>
+
+<Screenshot src="/images/administration/roles-list.jpg" alt="Roles & Permissions page" caption="(1) New Role, (2) Managed by Account Wise badge, (3) Duplicate, (4) View people and View permissions, (5) Custom badge, (6) row menu, (7) Edit permissions." />
+
+Each role card shows the role's name, how many people hold it, its category
+(for example, **Administration**, **Operational**, or **Read-only**), and its
+description. There are two kinds of roles:
+
+| Kind | Badge | What you can do |
+| --- | --- | --- |
+| **Built-in roles** | **Managed by Account Wise** | **View people**, **View permissions**, and **Duplicate**. Their permissions are read-only. |
+| **Custom roles** | **Custom** | **View people** and **Edit permissions**. The row menu (**⋮**) has **Duplicate** and **Delete**. |
+
+<Screenshot src="/images/administration/roles-custom-menu.jpg" alt="Custom role menu" caption="(1) Duplicate or Delete a custom role." width={560} />
+
+### Built-in roles
+
+| Role | Description shown in the app |
+| --- | --- |
+| **Admin** | Platform administrator — full access to every module. |
+| **Accountant** | Full access to every module. |
+| **Manager** | Read-only. Can view the ledger, dashboard, audit trail, and reports — no create, edit, or full access anywhere. |
+
+Your organization may also have other built-in or custom roles — for example,
+an auditor role.
+
+### Viewing the people in a role
+
+Select **View people** to see who holds the role, with each person's **Name**,
+**Email**, and **Locations** (for example, **Whole organization**).
+
+<Screenshot src="/images/administration/roles-people.jpg" alt="People with a role" caption="The people who hold the role. Email addresses are blurred in this example." width={560} />
+
+### Creating a role
+
+<Steps>
+
+<Step>
+### Open Create a role
+Select **New Role**. The **Create a role** dialog opens. The new role exists in
+your organization only — the roles managed by AccountWise stay read-only.
+</Step>
+
+<Step>
+### Choose how to start
+
+- **Start blank** — nothing is granted. Build the role up feature by feature.
+  The role grants nothing until you set permissions, so nobody gains access just
+  because it exists.
+- **Duplicate a role** — copy an existing role's permissions, then adjust them.
+  Pick the role under **Copy permissions from**; each role shows how many
+  grants it has across how many modules, and how many people hold it.
+
+<Screenshot src="/images/administration/roles-create.jpg" alt="Create a role — Start blank" caption="(1) Start from, (2) Role name, (3) Category, (4) category suggestions, (5) Description, (6) Create and set permissions." width={600} />
+
+<Screenshot src="/images/administration/roles-duplicate.jpg" alt="Create a role — Duplicate a role" caption="(1) Duplicate a role, (2) the role to copy permissions from." width={600} />
+</Step>
+
+<Step>
+### Name the role
+Enter a **Role name** (required) — it is shown on the role card and beside
+everyone who holds it. Optionally enter a **Category** (or pick a suggestion
+such as **Operational**, **Managerial**, **Executive**, or **Compliance**) and a
+**Description**.
+</Step>
+
+<Step>
+### Continue to permissions
+Select **Create and set permissions** to create the role and go on to set its
+permissions. See [Editing permissions](#editing-permissions).
+</Step>
+
+</Steps>
+
+### Editing permissions
+
+Select **Edit permissions** on a custom role. The page shows the role's
+**Role name**, **Category**, and **Description** (which you can change), and
+**View people**.
+
+<Screenshot src="/images/administration/roles-edit-permissions.jpg" alt="Edit permissions page" caption="(1) Role name, Category, and Description, (2) Search modules and features, (3) Apply to everything, (4) module with its granted count and Set access, (5) access level buttons, (6) Save changes." />
+
+Permissions are grouped by module, and each module shows how many permissions
+are granted (for example, **33/33**):
+
+| Module | Features |
+| --- | --- |
+| **Accounting** | Accounts, Journal, Ledger, Reconciliation, Reconciliation rules, Closing, Budget, Fixed assets, Bank transfers, Audit trail |
+| **Organization** | Organization, Locations, Items, Saved searches, Dashboard, Customer field map, User Management, Customer Lifecycle Transitions, Approvals |
+| **Purchasing (A/P)** | Bills, Purchase orders, Purchase returns, Vendor credits, Expenses, Expense reports, Expense reversals, Vendor payments, Credit card payments, Additional surcharges |
+| **Vendor management** | Vendors, Employees |
+| **Sales (A/R)** | Invoices, Sale orders, Credit memos, Receipts, Refund receipts, Refund settlements, Bank deposits |
+| **Customer management** | Customers, Customer assignment |
+| **Shared CRM sub-resources** | Activities, Notes — a grant here applies to both vendors and customers |
+| **Reporting** | Reports |
+
+For each feature, choose an access level: **View**, **Create**, **Edit**, or
+**Full**. Some features also have an extra permission — **Void** for Bills,
+Expense reports, and Invoices, and **Bypass** for Approvals. A dash (**–**)
+means the level isn't available for that feature — for example, the Audit
+trail, Dashboard, and Reports are read-only by design.
+
+To change many permissions at once:
+
+- Use **Set access** on a module to set every feature in that module.
+- Use **Apply to everything** to set every feature in every module: **Remove all
+  access**, **View only**, **Create & edit access**, or **Full access**.
+- Use **Search modules and features** to find a feature.
+
+<Screenshot src="/images/administration/roles-apply-everything.jpg" alt="Apply to everything options" caption="(1) Apply to everything options." />
+
+Your changes are listed at the bottom of the page (*No changes yet* until you
+change something). Select **Save changes** to save them, or **Cancel**.
+
+### Viewing a built-in role's permissions
+
+Select **View permissions** on a built-in role to see its permissions. The page
+is read-only — granted levels are highlighted, and the others are greyed out.
+
+<Screenshot src="/images/administration/roles-view-managed.jpg" alt="Read-only permissions of a built-in role" caption="(1) Read-only and Managed by Account Wise, (2) View people, (3) levels not granted, (4) a granted level." />
+
+### Assigning roles to users
+
+When creating a [user](/docs/administration/users), the admin assigns a role.
+Every available role is also listed wherever roles are selected — for example,
+in [Customer Lifecycle
+Transitions](/docs/administration/customer-lifecycle-transitions).
+
+## How permissions shape the application
+
+Access in AccountWise is checked **per module**, and the application adapts to
+the permissions of the signed-in user:
+
+- **Sidebar items** only appear when the user has **view** access to that
+  module. For example, **Invoices** appears under **Sales** only for users who
+  can view invoices, and a menu group such as **Sales** or **Purchase** only
+  appears when the user can view at least one item in it.
+- **Customization** pages under **Settings → Customization** only appear for
+  users with **full** access to the related document. See
+  [Customization](/docs/administration/customization).
+- While a page loads, AccountWise briefly shows **Checking your access…** as it
+  confirms the user may open that page.
+
+## Record-level access
+
+Some settings go further than module access and decide **which records** a role
+can act on. In [Customer Lifecycle
+Transitions](/docs/administration/customer-lifecycle-transitions), each role is
+given an access level:
+
+- **All Records** — can act on any Lead or Customer record.
+- **Own Records** — can act only on Leads and Customers assigned to them. See
+  [Customer Assignments](/docs/sales/customers/customer-assignments).
+
+## Approvals
+
+Approvers and approval policies are set up per document in **Settings →
+Approval Policy**, and approvers review requests from **Approvals** in the
+sidebar. Both pages are only shown to users with access to approvals. See
+[Approval Workflow](/docs/administration/approvals).
+
+## Related
+
+For a fuller explanation of what each role sees, see [User
+Roles](/docs/getting-started/user-roles).

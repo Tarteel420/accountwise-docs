@@ -1,0 +1,58 @@
+---
+title: Reconciliation Rules
+description: Rules that automatically match bank statement lines with your transactions.
+---
+
+**Reconciliation rules** decide how AccountWise automatically matches the lines
+of an uploaded bank statement with your recorded transactions during [Bank
+Reconciliation](/docs/banking/bank-reconciliation).
+
+## The Rules list
+
+Go to **Banking → Rules**.
+
+<Screenshot src="/images/banking/rules-list-annotated.jpg" alt="Reconciliation Rules list" caption="(1) Search, (2) Status, (3) Edit." />
+
+The list shows each rule's **Name** (with its rule number), **Description**,
+**Status**, and **Last Modified** date. There are four rules:
+
+| Rule | Description |
+| --- | --- |
+| **Transaction Date ± 1** | Transaction date within ± 1 day. |
+| **Description Partial Match** | Description partial or full match (case-insensitive). |
+| **Same Transaction Type** | Match by transaction type (Debit/Credit). |
+| **Same Amount** | Match by exact amount. |
+
+Rules can't be added from this page. The **Edit** icon is greyed out for
+**Same Transaction Type** and **Same Amount**, so those rules can't be changed.
+
+## Editing a rule
+
+<Steps>
+
+<Step>
+### Open the rule
+Select **Edit** (pencil) on the rule's row. The **Edit Rule** dialog opens.
+</Step>
+
+<Step>
+### Turn the rule on or off
+Use the **Rule Status** toggle. When the rule is on, the status reads **Active
+— Enabled** and **Rule is matching transactions**.
+</Step>
+
+<Step>
+### Set the date tolerance (Transaction Date rule only)
+For **Transaction Date ± 1**, enter the **Date Tolerance** in days. Matching is
+allowed within ± this many days of the bank transaction date. Enter **0** to
+match the exact date only.
+
+<Screenshot src="/images/banking/rules-edit.jpg" alt="Edit Rule dialog" caption="(1) Rule Status, (2) on/off toggle, (3) Date Tolerance, (4) Save Changes." width={640} />
+</Step>
+
+<Step>
+### Save
+Select **Save Changes**, or **Cancel** to close without saving.
+</Step>
+
+</Steps>

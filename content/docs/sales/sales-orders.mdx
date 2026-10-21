@@ -1,0 +1,149 @@
+---
+title: Sales Orders
+description: Confirm a customer order before converting it to an invoice.
+---
+
+A **Sales Order** confirms what a customer wants before you bill them. It is
+created by selecting a customer and adding items.
+
+<Callout type="info">
+  If your account is integrated with **Stock Wise**, the item list comes
+  directly from Stock Wise. Otherwise, AccountWise's internal items are used
+  (**Search AccountWise Items**).
+</Callout>
+
+## The Sales Orders list
+
+Go to **Sales → Sales Orders**.
+
+<Screenshot src="/images/sales/sales-order-list-annotated.jpg" alt="Sales Orders list" caption="(1) New Sales Order, (2) status tabs, (3) Customers, Start date, End date, and Search filters, (4) the invoice created from the order, (5) View, Edit, and Delete." />
+
+- **Status tabs** — **All**, **Draft**, **Pending**, **Approved**,
+  **Cancelled**, **Complete**, and **Void**, each with a count.
+- **Filters** — **Customers**, **Start date**, **End date**, and **Search**.
+- **Columns** — Customer (with the sales order number), Invoice, Work Order,
+  Sale Order Date, Payment Term, Quantity, Amount, Status, and Actions.
+
+Once a sales order is converted, the invoice number appears in the **Invoice**
+column as a **hyperlink** that opens that invoice.
+
+## Creating a sales order
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Sales → Sales Orders** and select **New Sales Order**. You can also
+start one from a customer's record with **Create Document → Create Sales
+Order**.
+</Step>
+
+<Step>
+### Select the customer
+Choose the customer in **Select Customer**. The **Customer Balance**, billing
+and shipping addresses, email, and payment term populate automatically. Enter a
+**Reference number** and check **Tax Type**, **Payment Term**, **Discount
+Type**, and **Sale Order Date**.
+
+<Screenshot src="/images/sales/sales-order-new.jpg" alt="New Sales Order form" caption="(1) Select Customer, (2) Reference number, (3) Email, (4) Tax Type, (5) Payment Term, (6) Discount Type, (7) Sale Order Date, (8) Create Shipnest Order." />
+</Step>
+
+<Step>
+### Complete the order details
+Optionally choose **Create Shipnest Order**, **Sales Person**, and
+**Location**, and add a **Memo** and **Shipping Date**.
+</Step>
+
+<Step>
+### Add items
+Search for items and use **Add Item** to add lines. Add any **Additional
+Surcharge** if needed. The item lines and totals work the same way as on an
+invoice — see [Invoices](/docs/sales/invoices#creating-an-invoice-directly).
+</Step>
+
+<Step>
+### Save
+Add any **Attachments** and **Terms and Conditions**, then select **Save as
+Draft** or **Create & Send**.
+</Step>
+
+</Steps>
+
+When a sales order is created:
+
+- Its status is **Pending**.
+- It can be **emailed** to the customer.
+- The customer can **approve or cancel** it, or a salesperson can approve it
+  manually.
+
+<Callout type="info">
+  No journal entry is made at this stage — revenue is not yet recognized.
+</Callout>
+
+## Viewing a sales order
+
+Select **View** on a row to open the sales order. It is shown as a **Proforma
+Invoice**, with the toolbar icons (Back, Edit, View, Download, Clone, Send) and
+these actions:
+
+| Action | What it does |
+| --- | --- |
+| **Packing Slip** | Opens the packing slip for the order. |
+| **Convert into Invoice** | Converts the sales order into an invoice. |
+| **Approve** | Approves a pending sales order. It is greyed out once the order is approved. |
+
+<Screenshot src="/images/sales/sales-order-detail.jpg" alt="Sales order detail page" caption="(1) Toolbar icons, (2) Packing Slip, (3) Convert into Invoice, (4) Approve." />
+
+The order's status is shown next to its number and as a watermark across the
+document — for example, **PENDING**. See [Invoices](/docs/sales/invoices#document-status-and-watermark).
+
+<Callout type="info">
+  Sales orders also support the [approval
+  workflow](/docs/administration/approvals). When approvals are turned on for
+  sales orders, a new or changed order must be approved before it takes effect.
+</Callout>
+
+## With Stock Wise integration
+
+If Stock Wise is integrated, a **Work Order** can be created from the sales
+order in **Draft** status. Once the sales order is approved, the work order
+status becomes **Open**.
+
+## Converting to an invoice
+
+To convert a sales order into an [Invoice](/docs/sales/invoices):
+
+<Steps>
+
+<Step>
+### Complete the stock steps (Stock Wise only)
+If Stock Wise is integrated, complete and close the Work Order in Stock Wise,
+then stock out the inventory.
+</Step>
+
+<Step>
+### Select Convert into Invoice
+Open the sales order and select **Convert into Invoice**.
+</Step>
+
+<Step>
+### Apply or skip credit memos
+The **Credit Memos** dialog lists the available credit memos with their
+**Credit Date**, **Original Amount**, and **Opening Balance**. To apply credit,
+tick a credit memo and enter the **Amount** to use, then select **Apply Credit
+Memo**. Otherwise select **Skip Credit Memo**. Select **Close** to cancel.
+
+<Screenshot src="/images/sales/sales-order-convert-credit-memo.jpg" alt="Credit Memos dialog when converting a sales order" caption="(1) Tick a credit memo, (2) enter the amount to apply, (3) Skip Credit Memo, (4) Apply Credit Memo." />
+</Step>
+
+</Steps>
+
+Once converted, the invoice number appears on the sales order listing page as a
+**hyperlink** that opens that invoice.
+
+## Related
+
+<Cards>
+  <Card title="Invoices" href="/docs/sales/invoices" />
+  <Card title="Voiding Sales Documents" href="/docs/sales/voiding-sales-documents" />
+</Cards>

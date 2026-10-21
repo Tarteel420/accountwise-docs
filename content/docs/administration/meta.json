@@ -1,0 +1,24 @@
+{
+  "title": "Administration",
+  "icon": "Settings",
+  "root": true,
+  "pages": [
+    "index",
+    "---Users & Access---",
+    "users",
+    "roles-and-profiles",
+    "---Records---",
+    "employees",
+    "items",
+    "---System Configuration---",
+    "customization",
+    "customer-fields-map",
+    "customer-lifecycle-transitions",
+    "locations",
+    "closing-date",
+    "organization",
+    "audit-trail",
+    "---Approvals---",
+    "approvals"
+  ]
+}

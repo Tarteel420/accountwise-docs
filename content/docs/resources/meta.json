@@ -1,0 +1,10 @@
+{
+  "title": "Resources",
+  "icon": "LifeBuoy",
+  "root": true,
+  "pages": [
+    "index",
+    "faq",
+    "glossary"
+  ]
+}

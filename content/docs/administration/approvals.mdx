@@ -1,0 +1,237 @@
+---
+title: Approval Workflow
+description: Require approval before documents take effect, and review, approve, or reject approval requests.
+---
+
+The **approval workflow** lets your organization require that certain documents
+are approved before they take effect. When approvals are turned on for a
+document type, a new or changed document is sent to the approver instead of
+taking effect straight away.
+
+The workflow has three parts:
+
+- **Approval Policy** — an administrator decides which documents need approval,
+  who approves them, and what happens when an approver doesn't act in time.
+- **Submitting** — the person creating or editing the document adds an optional
+  or required note and submits it for approval.
+- **Approvals** — the approver reviews the request and approves, rejects, or
+  reassigns it.
+
+## Setting up an approval policy
+
+Go to **Settings → Approval Policy**. The page lets you configure internal
+approval chains — who approves, in what order, and what happens when an SLA is
+missed.
+
+<Callout type="info">
+  **Approval Policy** is only shown to users with full access to approvals. See
+  [Roles & Profiles](/docs/administration/roles-and-profiles).
+</Callout>
+
+<Screenshot src="/images/administration/approval-policy-tabs.jpg" alt="Approval Policy page" caption="(1) Module tabs, (2) document tabs, (3) Requires Approval, (4) Save." />
+
+<Steps>
+
+<Step>
+### Choose the module and document
+Select the module tab, then the document. Each document has its own policy:
+
+| Module | Documents |
+| --- | --- |
+| **Sale** | Invoice, Sale Order, Sale Receipt, Invoice Receipt, Credit Memo, Refund Receipt |
+| **Purchase** | Bill, Purchase Order, Vendor Credit |
+| **Accounting** | Journal Entry, Budget |
+</Step>
+
+<Step>
+### Turn on Requires Approval
+Turn on **Requires Approval**. When it is off, the document is created exactly
+as normal — with no approval chain. When it is on, the policy settings appear.
+</Step>
+
+<Step>
+### Set up the approval layers
+Under **Approval layers**, set up **Layer 1**:
+
+- **Approver** — the user who must act on this layer. Users who can't approve
+  this document are greyed out with the reason — for example, *No access to
+  Approvals* or *Can't view Budgets*.
+- **Escalate if no action within** — the SLA time, in **Hours** or **Days**
+  (24 hours by default).
+- **On SLA breach** — what happens when the approver doesn't act in time:
+  **Auto-approve**, **Escalate to next layer**, or **Notify only**.
+
+Select **Add another layer** to add a further layer. With several layers, the
+request goes to layer 1 first, then to the next layer after each approval. The
+document only takes effect after the last layer approves.
+
+<Screenshot src="/images/administration/approval-policy-layer.jpg" alt="Approval layer settings" caption="(1) Requires Approval turned on, (2) Approver, (3) Escalate if no action within." />
+
+<Screenshot src="/images/administration/approval-policy-approver.jpg" alt="Choosing an approver" caption="(1) The approver list. Users who can't approve the document are greyed out, with the reason." />
+</Step>
+
+<Step>
+### Set the other options
+
+| Option | What it does |
+| --- | --- |
+| **Auto-approve conditions** | Turn on **The amount is under** and enter an amount. Documents under that amount skip the approval chain. Shown for documents that have an amount condition — for example, journal entries. |
+| **When the requester is also the approver** | **Require approval as normal**, **Auto-approve**, or **Block — escalate to next layer**. |
+| **Requester's note** | Choose whether the person submitting must add a note, or whether the note is **Optional**. |
+
+<Screenshot src="/images/administration/approval-policy-options.jpg" alt="Approval policy options" caption="(1) On SLA breach, (2) Add another layer, (3) Auto-approve conditions, (4) When the requester is also the approver." />
+</Step>
+
+<Step>
+### Save
+Select **Save**. A confirmation shows **Approval policy saved**.
+
+<Screenshot src="/images/administration/approval-policy-note.jpg" alt="Requester's note and Save" caption="(1) Requester's note, (2) Save." />
+</Step>
+
+</Steps>
+
+## Submitting a document for approval
+
+When approvals are on, create or edit the document as usual. When you save it:
+
+<Steps>
+
+<Step>
+### Add a note
+The **Submit for Approval** dialog opens: *This change requires approval before
+it takes effect.* Enter a **Note** — it is marked **(optional)** or
+**(required)**, depending on the policy.
+
+<Screenshot src="/images/administration/approvals-submit-dialog.jpg" alt="Submit for Approval dialog" caption="(1) Note, (2) Submit." width={560} />
+</Step>
+
+<Step>
+### Submit
+Select **Submit**, or **Cancel** to go back. The document is saved with the
+status **Pending approval** and doesn't take effect until it is decided. The
+approver is notified.
+</Step>
+
+</Steps>
+
+### While a request is pending
+
+The document shows **Pending approval** next to its name, and a status bar
+explains what that means — for a budget: *This budget is waiting for approval
+and won't count in Budget vs Actual until it's approved. You can still edit it,
+which withdraws the current request.*
+
+<Screenshot src="/images/banking/budget-pending-banner.jpg" alt="Pending approval status bar on a budget" caption="(1) Pending approval status, (2) status bar, (3) Cancel approval request and View approval." />
+
+From the status bar you can:
+
+- Select **View approval** to open the approval request.
+- Select **Cancel approval request** to withdraw it. Enter a **Reason for
+  withdrawal (required)** and select **Withdraw request**. The approver is
+  notified, and the document goes back to **Draft**, where you can edit it or
+  submit it again.
+
+Editing a document that is already approved sends the **change** for approval.
+
+### In the lists
+
+Lists for documents that support approvals show the approval status — for
+example, the **Budgeting** and **Journal Entries** lists have **Pending
+approval**, **Rejected**, and **Draft** tabs. A pending row also has a **Cancel
+approval request** icon.
+
+<Screenshot src="/images/banking/budget-pending-row.jpg" alt="Pending budget in the Budgeting list" caption="(1) Pending approval tab, (2) Pending approval status, (3) Cancel approval request." />
+
+## Reviewing approval requests
+
+Go to **Approvals** in the sidebar. The page has two tabs: **Inbox** and
+**History**.
+
+### Inbox
+
+The **Inbox** lists the requests waiting for your decision. When there are
+none, it shows *No items pending approval.*
+
+<Screenshot src="/images/administration/approvals-inbox-empty.jpg" alt="Empty Approvals inbox" caption="(1) Inbox and History tabs." />
+
+Each request shows:
+
+<Screenshot src="/images/administration/approvals-inbox-item.jpg" alt="Request in the Approvals inbox" caption="(1) Document type and time left before the SLA is breached, (2) document, submitter, View document, and the requester's note, (3) amount, (4) Approve, Reject, and Reassign." />
+
+- The **document type** (for example, **Budget**) and the **time remaining**
+  before the SLA is breached (for example, **24h remaining**).
+- The document name, **Submitted by**, a **View document** link, and the
+  requester's note.
+- The amount.
+
+Select **View document** to review the document before you decide.
+
+### Deciding
+
+| Action | What happens |
+| --- | --- |
+| **Approve** | A confirmation asks *Approve this request?* — it records your approval and moves the request forward. Select **Approve** to confirm. At the last layer, the document takes effect — for example, a budget becomes **Active**. |
+| **Reject** | Enter a **Reason for rejection (required)** and select **Confirm**. **Confirm** stays disabled until you enter a reason. The requester sees your reason. |
+| **Reassign** | Choose the user to hand the request off to (**Hand off to:**). |
+
+<Screenshot src="/images/administration/approvals-approve-confirm.jpg" alt="Approve this request confirmation" caption="Confirm the approval." width={500} />
+
+<Screenshot src="/images/administration/approvals-reject.jpg" alt="Rejecting a request" caption="(1) Reason for rejection, (2) Confirm or Cancel." />
+
+### The approval detail page
+
+Select **View approval** on a document (or open a request) to see its detail
+page:
+
+<Screenshot src="/images/administration/approvals-detail.jpg" alt="Approval detail page" caption="(1) Document type, status, name, submitter, and note, (2) View document and Cancel approval request, (3) Approval chain, (4) Approve, Reject, and Reassign." />
+
+- The document type, request status (for example, **IN_PROGRESS**), name,
+  submitter, note, and amount.
+- **View document**, and — for the requester — **Cancel approval request**.
+- The **Approval chain** — each **Layer**, its approver, and its state (for
+  example, **READY**).
+- **Approve**, **Reject**, and **Reassign**, for the current approver.
+
+### History
+
+The **History** tab lists past requests. Switch between **All history** and
+**Decided by me**, and filter by **Item type** and **Status**. Each row shows
+the document, who submitted it, the amount, the decision (for example,
+**Approved**), and when it was made.
+
+<Screenshot src="/images/administration/approvals-history.jpg" alt="Approvals history" caption="(1) All history and Decided by me, (2) Item type and Status filters, (3) decision and time." />
+
+<Screenshot src="/images/administration/approvals-item-types.jpg" alt="Item type filter" caption="(1) The Item type filter lists every document type that supports approvals." width={420} />
+
+## Approval history on a document
+
+After a decision, the document shows an **Approval History** section with each
+decision, who made it, and when — for example, **Approved (final)**. Other
+entries include **Rejected**, **Rejected (final)**, **Withdrawn by requester**,
+and **Handed off**.
+
+<Screenshot src="/images/banking/budget-approval-history-section.jpg" alt="Approval History on a budget" caption="(1) The decision and approver, (2) View as decided." />
+
+Select **View as decided** to open a **snapshot** of the document exactly as it
+was when the decision was made. The snapshot shows the decision, who made it and
+when, the request type (for example, **New budget**), the document details, and
+any **Comments** from the approver. Select **View the live document** to open
+the current version.
+
+<Screenshot src="/images/administration/approvals-snapshot.jpg" alt="Approval snapshot" caption="(1) Decision, approver, and time, (2) historical snapshot notice and link to the live document, (3) request type, (4) Comments." />
+
+<Callout type="info">
+  The document's **History** section also records approval events — for
+  example, **Submit_budget_for_approval**, **Budget_approved**, and
+  **Budget_rejected** — with the user and time.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Budgeting" href="/docs/banking/budgeting" />
+  <Card title="Journal Entries" href="/docs/accounting/journal-entries" />
+  <Card title="Invoices" href="/docs/sales/invoices" />
+  <Card title="Roles & Profiles" href="/docs/administration/roles-and-profiles" />
+</Cards>

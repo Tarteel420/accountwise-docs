@@ -1,0 +1,108 @@
+---
+title: Bills
+description: Record a vendor invoice, creating the expense and the liability.
+---
+
+A **Bill** records a vendor invoice for goods or services received. When
+created, AccountWise records the journal entry: the expense or asset account is
+debited and **Accounts Payable** is created.
+
+## How a bill is created
+
+A bill can be:
+
+- **Created directly.**
+- **Converted from a [Purchase Order](/docs/purchases/purchase-orders).**
+
+Bills remain **open** until fully paid.
+
+## The Bills list
+
+Go to **Purchase → Bills**.
+
+<Screenshot src="/images/purchases/bill-list-annotated.jpg" alt="Bills list" caption="(1) New Bill, (2) status tabs, (3) Vendors, Start date, End date, and Search filters." />
+
+- **Status tabs** — **All**, **Draft**, **Unpaid**, **Partial**, **Paid**,
+  **Overdue**, and **Void**, each with a count.
+- **Columns** — Vendor (with the bill number), Purchase Order, Bill Date, Due
+  Date, Quantity, Amount, Paid Amount, Return Amount, Status, and Actions.
+- **Row actions** — **View**, **Edit**, **Delete**, and **See more** (**Clone**
+  and **Void**).
+
+<Screenshot src="/images/purchases/bill-row-actions.jpg" alt="Bill row actions and See more menu" caption="(1) View, Edit, Delete, and See more. (2) The See more menu: Clone and Void." width={720} />
+
+## Creating a bill directly
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Purchase → Bills** and select **New Bill**.
+</Step>
+
+<Step>
+### Select the vendor and enter the header details
+Choose the vendor in **Select Vendor** — the **Mailing Address** is filled in
+from the vendor record. Enter a **Reference number** (optional) and **Email**,
+and set the **Payment Term**, **Bill Date**, **Due Date**, **Tax Type**, and
+**Discount Type**. Optionally choose a **Location**.
+
+<Screenshot src="/images/purchases/bill-new-1.jpg" alt="New Bill form" caption="(1) Select Vendor, (2) Mailing Address, (3) Reference number, (4) Email, (5) Payment Term, (6) Bill Date, (7) Due Date, (8) Tax Type, (9) Discount Type, (10) Location, (11) Search AccountWise Items." />
+</Step>
+
+<Step>
+### Add items
+Under **Details**, use **Search AccountWise Items** or **Add Item** to add lines
+for what was received, and enter any **tax** and **discount**. The **amount**
+field is editable; if you change the amount, the **rate** updates automatically
+to match.
+</Step>
+
+<Step>
+### Save
+Add any **Attachments** and review the **Terms and Conditions**. Then select
+**Save as Draft**, **Create**, or **Create & Send**. Select **Create** to only
+create the bill — the vendor does not receive an email.
+
+<Screenshot src="/images/purchases/bill-new-2.jpg" alt="Bill save options" caption="(12) Save as Draft, (13) Create, (14) Create & Send." />
+</Step>
+
+</Steps>
+
+On save, AccountWise debits the expense/asset account and creates Accounts
+Payable.
+
+## Bill status
+
+A bill's status is shown as a watermark across the bill — for example,
+**PAID**. See [Invoices](/docs/sales/invoices#document-status-and-watermark)
+for how document status is displayed.
+
+<Screenshot src="/images/purchases/bill-status-watermark.jpg" alt="Status watermark on a paid bill" caption="The PAID watermark on a paid bill." />
+
+## Useful behaviors
+
+- A shortcut on the bill lets you **mark it as paid** directly.
+- Vendor credits can be applied when you pay the bill. See [Bill
+  Payments](/docs/purchases/bill-payments).
+
+## Purchased For field
+
+Bills can include a **Purchased For** dropdown (*SJ Computers*, *Start Used
+Computers*, *Both*). This field is customizable and appears only when it is
+enabled for your organization.
+
+<Callout type="info">
+  Bills support the [approval workflow](/docs/administration/approvals). When
+  your organization turns on **Requires Approval** for this document in
+  **Settings → Approval Policy**, a new or changed document must be approved
+  before it takes effect.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Bill Payments" href="/docs/purchases/bill-payments" />
+  <Card title="Vendor Credits" href="/docs/purchases/vendor-credits" />
+  <Card title="Voiding Purchase Documents" href="/docs/purchases/voiding-purchase-documents" />
+</Cards>

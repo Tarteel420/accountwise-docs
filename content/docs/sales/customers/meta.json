@@ -1,0 +1,11 @@
+{
+  "title": "Customers",
+  "icon": "Users",
+  "pages": [
+    "index",
+    "creating-customers",
+    "customer-details",
+    "activities-and-notes",
+    "customer-assignments"
+  ]
+}

@@ -1,0 +1,78 @@
+---
+title: Bank Deposits
+description: Deposit received payments, and any additional funds, into a bank account.
+---
+
+**Bank Deposits** move payments you have received from the **Undeposited
+Funds** account into a bank account. You can also add other funds to the same
+deposit.
+
+## The Bank Deposits list
+
+Go to **Banking → Bank Deposits**.
+
+<Screenshot src="/images/banking/deposit-list-annotated.jpg" alt="Bank Deposits list" caption="(1) New Deposit, (2) Account filter, (3) Start date and End date, (4) Search." />
+
+The list shows the **Account** (with the deposit number), **Date**,
+**Description**, **Location**, and **Amount**. Select a row to open the deposit.
+
+## Creating a deposit
+
+<Steps>
+
+<Step>
+### Open the form
+On the Bank Deposits page, select **New Deposit**.
+</Step>
+
+<Step>
+### Enter the deposit details
+Choose the **Account** to deposit into. The **Date** defaults to today.
+Optionally enter a **Description** and choose a **Location**.
+</Step>
+
+<Step>
+### Select the payments
+Under **Select Payments to Deposit**, tick each payment to include. Each line
+shows the document number and who it was **Received From**, its **Date**,
+**Type** (for example, **InvoiceReceipt** or **CreditMemo**), and **Amount**.
+Use the checkbox in the header to select all. The **Total Amount** at the top
+updates as you select payments.
+
+<Screenshot src="/images/banking/deposit-new-1.jpg" alt="New Deposit form" caption="(1) Account, (2) Date, (3) Description, (4) Location, (5) Total Amount, (6) tick the payments to deposit." />
+</Step>
+
+<Step>
+### Add other funds (optional)
+Under **Add Funds to this Deposit**, select **Add Fund** to add a line. Choose
+the **Account** the funds come from, enter a **Description**, **Location**, and
+the **Amount**. Use the bin icon to remove a line.
+
+<Screenshot src="/images/banking/deposit-new-2.jpg" alt="Add Funds to this Deposit" caption="(1) Add Fund, (2) Account, (3) Description, (4) Location, (5) Amount, (6) remove the line, (7) Create Deposit." />
+</Step>
+
+<Step>
+### Save
+Select **Create Deposit**, or **Cancel** to discard it.
+</Step>
+
+</Steps>
+
+## Viewing a deposit
+
+Select a deposit in the list to open its details.
+
+<Screenshot src="/images/banking/deposit-detail.jpg" alt="Bank deposit details" caption="(1) Account, Date, Total Deposited, Description, and Location, (2) Deposit Summary, (3) Payment Details." />
+
+- **Deposit Summary** — **Payments Received**, **Additional Funds**, and
+  **Amount Received in Bank**.
+- **Payment Details** — the payments included in the deposit.
+- **GL Impact** — the journal entry. The bank account is debited and
+  **Undeposited Funds** is credited.
+
+## Related
+
+<Cards>
+  <Card title="Invoice Receipts" href="/docs/sales/invoice-receipts" />
+  <Card title="Sales Receipts" href="/docs/sales/sales-receipts" />
+</Cards>

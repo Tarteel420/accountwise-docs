@@ -1,0 +1,22 @@
+{
+  "title": "Purchases",
+  "icon": "ShoppingCart",
+  "root": true,
+  "pages": [
+    "index",
+    "vendors",
+    "---Purchase Documents---",
+    "purchase-orders",
+    "bills",
+    "bill-payments",
+    "expenses",
+    "credit-card-payments",
+    "vendor-credits",
+    "purchase-returns",
+    "expense-reversal",
+    "---Employee Expenses---",
+    "expense-reports",
+    "---Tools & Configuration---",
+    "voiding-purchase-documents"
+  ]
+}

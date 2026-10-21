@@ -1,0 +1,138 @@
+---
+title: Chart of Accounts
+description: The five primary account types at the core of AccountWise, and how to manage accounts.
+---
+
+At the core of AccountWise is the **Chart of Accounts**. Every financial
+transaction ultimately posts entries to these accounts.
+
+## The five account types
+
+| Account Type | What it represents |
+| --- | --- |
+| Assets | What the business owns |
+| Liabilities | What the business owes |
+| Equity | The owner's stake |
+| Revenue | Income earned |
+| Expense | Costs incurred |
+
+Each category contains **default system accounts**.
+
+## The Chart of Accounts list
+
+Go to **Chart of Accounts** in the sidebar. Accounts are listed in a tree,
+grouped under their account type, with child accounts shown beneath their
+parent account. Use the arrow next to a parent account to expand or collapse it.
+
+<Screenshot src="/images/accounting/coa-list-annotated.png" alt="Chart of Accounts list with toolbar, tabs, and actions highlighted" caption="(1) Export, (2) Import, (3) New Account, (4) All / Active / Inactive tabs, (5) row actions." />
+
+| Area | What it does |
+| --- | --- |
+| **All / Active / Inactive** tabs | Show all accounts, or only active or inactive accounts. Each tab shows a count. |
+| **Search** | Search the accounts list. |
+| Columns | **Name**, **Number**, **Type**, **Sub Type**, **Status**, and **Actions**. |
+| **View** (eye icon) | Open the account's detail page. |
+| **Edit** (pencil icon) | Edit the account. |
+| **Delete** (bin icon) | Delete the account. |
+| **Deactivate** | Mark the account as inactive. |
+| **Export** | Export the list of accounts. |
+| **Import** | Bulk import accounts from a CSV template. |
+
+<Callout type="warn">
+  Default system accounts cannot be edited, deleted, or deactivated — their
+  Edit, Delete, and Deactivate actions are greyed out. This protects accounting
+  integrity.
+</Callout>
+
+## Adding your own accounts
+
+You can create additional accounts within any of the five categories as your
+business needs them. Each account also has a **Sub Type** for finer
+organization.
+
+<Steps>
+
+<Step>
+### Open the Create Account form
+On the Chart of Accounts page, select **New Account**. The **Create Account**
+dialog opens.
+</Step>
+
+<Step>
+### Fill in account details
+Complete the fields:
+
+| Field | Notes |
+| --- | --- |
+| Type | **Asset**, **Liability**, **Equity**, **Revenue**, or **Expense**. Required. |
+| Sub Type | The sub type within the selected type. Required. |
+| Account Number | Required. |
+| Account Name | Required. |
+| Parent Account | Optional. Select a parent if this account should roll up under another account. |
+
+Expand **Additional Fields** to enter optional **Bank Name**, **Bank Account
+Number**, **Bank Routing Number**, and **Description**.
+
+<Screenshot src="/images/accounting/coa-create-account.png" alt="Create Account dialog with fields numbered" caption="(1) Type, (2) Sub Type, (3) Account Number, (4) Account Name, (5) Parent Account, (6) Additional Fields, (7) Create Account." />
+</Step>
+
+<Step>
+### Save
+Select **Create Account** to add it to your Chart of Accounts, or **Cancel** to
+close the dialog.
+</Step>
+
+</Steps>
+
+## Viewing an account
+
+Select an account name, or its **View** (eye) icon, to open its detail page.
+The page shows the account name and status, an **Account Information** section
+(Account Number, Account Type, Sub Type, Bank Name, Bank Account Number, Bank
+Routing Number, and Description), and a **History** panel listing changes made
+to the account.
+
+<Screenshot src="/images/accounting/coa-account-detail.png" alt="Account detail page" caption="An account's detail page. Use the back arrow (1) to return to the list." />
+
+## Editing an account
+
+Select the **Edit** (pencil) icon on the account's row. The **Edit Account**
+dialog opens with the account's current details. The **Account Number** cannot
+be changed. Make your changes and select **Save Changes**.
+
+<Screenshot src="/images/accounting/coa-edit-account.png" alt="Edit Account dialog" caption="The Edit Account dialog — (1) Parent Account can be changed; (2) select Save Changes to apply." />
+
+## Bulk import
+
+You can **bulk import** the Chart of Accounts rather than entering accounts one
+by one.
+
+<Steps>
+
+<Step>
+### Open Import
+On the Chart of Accounts page, select **Import**. The **Import Accounts** dialog
+opens.
+</Step>
+
+<Step>
+### Download the template
+Under **Step 1: Download Template**, select **Download Template**. Fill in the
+CSV template with your chart of accounts data.
+</Step>
+
+<Step>
+### Upload the filled template
+Under **Step 2: Upload Filled Template**, select **Select File** and choose your
+completed CSV file to preview and import it.
+
+<Screenshot src="/images/accounting/coa-import.png" alt="Import Accounts dialog" caption="(1) Download Template, (2) Select File to upload the completed CSV." />
+</Step>
+
+</Steps>
+
+## Related
+
+<Cards>
+  <Card title="Journal Entries" href="/docs/accounting/journal-entries" />
+</Cards>

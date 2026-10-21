@@ -1,0 +1,20 @@
+{
+  "title": "Sales",
+  "icon": "TrendingUp",
+  "root": true,
+  "pages": [
+    "index",
+    "customers",
+    "---Sales Documents---",
+    "sales-orders",
+    "invoices",
+    "invoice-receipts",
+    "sales-receipts",
+    "credit-memos",
+    "refund-receipts",
+    "---Tools & Configuration---",
+    "additional-surcharges",
+    "voiding-sales-documents",
+    "shipnest-integration"
+  ]
+}

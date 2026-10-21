@@ -1,0 +1,73 @@
+---
+title: Vendor Credits
+description: Record returns, overpayments, and vendor adjustments.
+---
+
+A **Vendor Credit** is created when:
+
+- Goods are returned to a vendor
+- An overpayment is made
+- A vendor issues an adjustment
+
+## The Vendor Credit list
+
+Go to **Purchase → Vendor Credits**.
+
+<Screenshot src="/images/purchases/vendor-credit-list-annotated.jpg" alt="Vendor Credit list" caption="(1) New Vendor Credit, (2) All, Draft, Created, Partial, and Applied tabs, (3) Vendors, Start date, End date, and Search filters." />
+
+The list shows the Vendor (with the credit number), Vendor Credit Date, Amount,
+Applied Amount, and Status, with **View**, **Edit**, **Delete**, and **See
+more** actions on each row.
+
+## Creating a vendor credit
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Purchase → Vendor Credits** and select **New Vendor Credit**.
+</Step>
+
+<Step>
+### Select the vendor and enter the header details
+Choose the vendor in **Select Vendor** — the **Mailing Address** is filled in.
+Enter the **Reference Number** and **Email**, check the **Vendor Credit Date**,
+and optionally link a **Purchase Order Number** and choose a **Location**.
+
+<Screenshot src="/images/purchases/vendor-credit-new-annotated.jpg" alt="New Vendor Credit form" caption="(1) Select Vendor, (2) Reference Number, (3) Email, (4) Purchase Order Number, (5) Vendor Credit Date, (6) Location." />
+</Step>
+
+<Step>
+### Add details and account
+Under **Details**, enter a **Description**, select the appropriate **Account**,
+and enter the **Quantity** and **Rate** — the **Amount** is calculated. Select
+**Add Item** for more lines.
+</Step>
+
+<Step>
+### Save
+Add any **Attachments**, complete the **Terms and Conditions** (required), and
+select **Save as Draft**, **Create**, or **Create & Send**. The vendor credit is
+then available to apply later.
+</Step>
+
+</Steps>
+
+## Applying vendor credits
+
+Vendor credits reduce the outstanding liability and can be applied later during
+[Bill Payment](/docs/purchases/bill-payments) (tick **Use Vendor Credit**) or
+[Bill](/docs/purchases/bills) creation.
+
+<Callout type="info">
+  Vendor credits also affect vendor balances in reports. See [Vendor
+  Reports](/docs/reports/vendor-reports).
+</Callout>
+
+<Callout type="info">
+  Vendor credits support the [approval workflow](/docs/administration/approvals). When
+  your organization turns on **Requires Approval** for this document in
+  **Settings → Approval Policy**, a new or changed document must be approved
+  before it takes effect.
+</Callout>
+

@@ -1,0 +1,97 @@
+---
+title: Credit Memos
+description: Handle advances, returns, adjustments, and refunds.
+---
+
+A **Credit Memo** is created in situations such as:
+
+- Customer advance payments
+- Sales returns
+- Adjustments for future orders
+- Refunds
+
+## The Credit Memos list
+
+Go to **Sales → Credit Memos**.
+
+<Screenshot src="/images/sales/credit-memo-list-annotated.jpg" alt="Credit Memos list" caption="(1) New Credit Memo, (2) status tabs, (3) Customers, Start date, End date, and Search filters, (4) View, Edit, Delete, and See more." />
+
+- **Status tabs** — **All**, **Draft**, **Created**, **Partial**, and
+  **Applied**, each with a count.
+- **Columns** — Customer (with the credit memo number), Credit Memo Date,
+  Amount, Applied Amount, Status, and Actions.
+- Row actions — **View**, **Edit**, **Delete**, and **See more → Clone**.
+
+## Creating a credit memo
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Sales → Credit Memos** and select **New Credit Memo**. You can also
+start one from a customer's record with **Create Document → Create Credit
+Memo**.
+</Step>
+
+<Step>
+### Select the customer and enter the header details
+Choose the customer in **Select Customer** — the **Billing Address** is filled
+in from the customer record. Enter a **Reference number** and **Email**, and
+check the **Credit Memo Date**. Optionally link a **Sale Order Number** (this is
+not mandatory) and choose a **Location**.
+
+<Screenshot src="/images/sales/credit-memo-new-1.jpg" alt="New Credit Memo form" caption="(1) Select Customer, (2) Reference number, (3) Email, (4) Sale Order Number, (5) Credit Memo Date, (6) Location." />
+</Step>
+
+<Step>
+### Add details and account
+Under **Details**, enter a **Description**, select the appropriate
+**Account**, and enter the **Quantity** and **Rate** — the **Amount** is
+calculated. Select **Add Item** to add more lines.
+
+<Screenshot src="/images/sales/credit-memo-new-2.jpg" alt="Credit memo detail lines" caption="(7) Description, (8) Account, (9) Quantity, Rate, and Amount, (10) Add Item." />
+</Step>
+
+<Step>
+### Save
+Add any **Attachments**, complete the **Terms and Conditions** (required), and
+select **Save as Draft** or **Create & Send**. The credit memo is then
+available to apply later.
+</Step>
+
+</Steps>
+
+You may select a related [Sales Order](/docs/sales/sales-orders), but it is
+**not mandatory**.
+
+Depending on the scenario, you select the appropriate account:
+
+| Scenario | Account type |
+| --- | --- |
+| Advance payment | Asset account |
+| Sales return | Sales account |
+
+<Callout type="info">
+  Credit memos support the [approval workflow](/docs/administration/approvals).
+  When approvals are turned on for credit memos, a new or changed credit memo
+  must be approved before it takes effect.
+</Callout>
+
+## Applying a credit memo
+
+Credit memos can later be applied during:
+
+- [Invoice](/docs/sales/invoices) creation
+- [Invoice Receipt](/docs/sales/invoice-receipts) creation (tick **Use Credit Memos**)
+- Converting a [Sales Order](/docs/sales/sales-orders#converting-to-an-invoice) into an invoice
+
+<Callout type="info">
+  Credit memos also affect customer balances in reports. See [Customer
+  Reports](/docs/reports/customer-reports).
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Refund Receipts" href="/docs/sales/refund-receipts" />
+</Cards>

@@ -1,0 +1,64 @@
+---
+title: Audit Trail
+description: A log of system activity for tracking and transparency.
+---
+
+The **Audit Trail** logs system activity — who did what, to which document, and
+when.
+
+<Callout type="info">
+  Some AccountWise features run on shared services that are also used by other
+  99 Technologies products — for example, shared invoice, customer, attachment,
+  and approval services. The Audit Trail collects the activity recorded by these
+  services and shows it here together with the rest of AccountWise's activity,
+  so you see one consolidated log.
+</Callout>
+
+## The Audit Trail list
+
+Go to **Audit Trail** in the sidebar.
+
+<Screenshot src="/images/administration/audit-trail-list.jpg" alt="Audit Trail list" caption="(1) Entity type, (2) Start Date and End Date, (3) Search, (4) Apply Filters, (5) View." />
+
+Each entry shows:
+
+| Column | Description |
+| --- | --- |
+| **Date/Time** | When the action occurred. |
+| **Modified by** | The user who performed the action. |
+| **Type** | The type of record affected, for example **Invoice** or **Employee**. |
+| **Document Number** | The specific document, when there is one. |
+| **Action** | What was done, for example **Create_invoice**, **Send_invoice_email**, or **Import_employees**. |
+
+## Filtering the log
+
+<Steps>
+
+<Step>
+### Choose the filters
+Choose an **Entity type** (or **All Entities**), and optionally a **Start Date**
+and **End Date**, or enter text in **Search**.
+
+Entity types include Invoice, Receipt, Sales Order, Credit Memo, Refund
+Receipt, Vendor, Employee, Purchase Order, Bill, Payment, Vendor Credit,
+Purchase Return, Expense Reversal, Expense Report, Journal Entry, Account,
+Customer, Budget, Bank Reconciliation, Fixed Asset, Bank Deposit, and Bank
+Transfer.
+</Step>
+
+<Step>
+### Apply
+Select **Apply Filters**.
+</Step>
+
+</Steps>
+
+## Viewing an entry
+
+Select **View** (eye) on a row to open the entry.
+
+<Screenshot src="/images/administration/audit-trail-detail.jpg" alt="Audit Trail entry" caption="(1) Back, (2) Date/Time, Created by, Entity, and Action, (3) Details." />
+
+The **Details** table lists each **Field** and its **Value** as recorded for the
+action — for example, the customer, items, amounts, and addresses on an
+invoice.

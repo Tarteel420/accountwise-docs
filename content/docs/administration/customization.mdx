@@ -1,0 +1,118 @@
+---
+title: Customization
+description: Customize sales and purchase documents and reports.
+---
+
+The **Customization** settings let you tailor how documents and reports appear.
+
+You can customize:
+
+- Sales documents
+- Purchase documents
+- Reports
+
+Go to **Settings → Customization**, then choose **Sale** or **Purchase** and the
+item you want to customize.
+
+<Callout type="info">
+  Customization pages are only shown to users with **full** access to the
+  related document. See [Roles & Profiles](/docs/administration/roles-and-profiles).
+</Callout>
+
+## What you can customize
+
+Each document type has up to three customization pages:
+
+- **Document** — the fields on the document form (for example, **Invoice**).
+- **Item** — the fields on the document's item lines (for example, **Invoice Item**).
+- **Report** — the layout of the printable document (for example, **Invoice Report**).
+
+| Area | Customization pages |
+| --- | --- |
+| **Sale** | Invoice, Invoice Item, Invoice Report · Sale Receipt, Sale Receipt Report · Invoice Receipt, Invoice Receipt Report · Credit Memo, Credit Memo Item, Credit Memo Report · Refund Receipt, Refund Receipt Item, Refund Receipt Report |
+| **Purchase** | Bill, Bill Item, Bill Report · Bill Payment, Bill Payment Report · Expense · Expense Report · Expense Reversal, Expense Reversal Item, Expense Reversal Report · Vendor Credit, Vendor Credit Item, Vendor Credit Report · Purchase Return, Purchase Return Item, Purchase Return Report · Employee Expense, Employee Expense Item, Employee Expense Report |
+
+<Callout type="info">
+  You can also open any customization page from the global search (**⌘K**) by
+  typing its name.
+</Callout>
+
+## Customize document fields
+
+Document and item pages (for example, **Invoice** or **Invoice Item**) list the
+form's fields. For each field you can:
+
+<Screenshot src="/images/administration/customization-fields.jpg" alt="Invoice customization page" caption="(1) Drag handle, (2) Visible, (3) Required, (4) Field Width, (5) Edit, (6) Delete, (7) Reset to Defaults, (8) New Custom Field, (9) Save Changes." />
+
+| Control | What it does |
+| --- | --- |
+| Drag handle | Drag the field to change its order on the form. |
+| **Visible** | Show or hide the field. |
+| **Required** | Make the field mandatory. |
+| **Field Width** | Set how wide the field is on the form. |
+| Edit (pencil) | Edit the field. |
+| Delete (bin) | Remove the field. |
+
+Select **Save Changes** to apply your changes, or **Reset to Defaults** to
+restore the original field setup.
+
+### Add a custom field
+
+<Steps>
+
+<Step>
+### Open the dialog
+Select **New Custom Field**. The **Add Custom Field** dialog opens.
+</Step>
+
+<Step>
+### Define the field
+
+| Field | Notes |
+| --- | --- |
+| Field Label | The name shown on the form. Required. |
+| Field Type | **Text**, **List**, **Number**, or **BigText**. |
+| Field Width | Default is **6**. |
+| Visibility | **Yes** or **No**. |
+| Required | **Yes** or **No**. |
+| Default Value | Optional value pre-filled on new documents. |
+
+<Screenshot src="/images/administration/customization-add-field.jpg" alt="Add Custom Field dialog" caption="(1) Field Label, (2) Field Type, (3) Field Width, (4) Visibility, (5) Required, (6) Default Value, (7) Add Field." width={640} />
+</Step>
+
+<Step>
+### Add the field
+Select **Add Field**. Then select **Save Changes** on the customization page.
+</Step>
+
+</Steps>
+
+## Customize report layouts
+
+Report pages (for example, **Invoice Report**) control the layout of the
+printable document. The page is divided into layout sections:
+
+<Screenshot src="/images/administration/customization-report.jpg" alt="Invoice Report customization page" caption="(1) Preview Report, (2) Reset to Defaults, (3) Apply Changes, (4) drag a section or open its settings, (5) drag an item within a section." />
+
+| Section | What you can do |
+| --- | --- |
+| **Header Layout** | Drag to rearrange sections and items within each section — for example, the company logo, document number, and dates. |
+| **Address Layout** | Drag to rearrange address sections (such as **Bill To** and **Ship To**). Items within an address cannot be reordered. |
+| **Item Table Layout** | Drag to rearrange columns in the item table. Use the settings icon to show or hide columns. |
+| **Totals Layout** | Drag to rearrange how totals are displayed. The **Total** line cannot be reordered. |
+| **Notes** | Turn **Show Notes** on or off. |
+| **Bank Details Layout** | Turn **Show Bank Details** on or off, and drag to rearrange the bank details. |
+| **Terms & Conditions** | Turn **Show Terms** on or off. |
+
+Use the buttons at the top of the page:
+
+- **Preview Report** — preview the document with your layout.
+- **Reset to Defaults** — restore the original layout.
+- **Apply Changes** — save the layout.
+
+## Related
+
+<Cards>
+  <Card title="Customer Fields Map" href="/docs/administration/customer-fields-map" />
+  <Card title="Locations" href="/docs/administration/locations" />
+</Cards>

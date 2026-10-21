@@ -1,0 +1,69 @@
+---
+title: Record a Payment
+description: How to record money received from a customer or paid to a vendor.
+---
+
+Payments close the loop on the sales and purchase cycles. This quickstart covers
+both directions.
+
+## Money received (customer)
+
+<Steps>
+
+<Step>
+### Open the invoice
+Go to **Sales → Invoices** and select **View** on the invoice.
+</Step>
+
+<Step>
+### Mark as paid
+Select **Mark as Paid**. In **Mark Invoice as Paid**, enter the **Amount** (full
+or partial), **Payment Method**, **Payment Account**, and **Payment Date**,
+optionally attach files, and select **Mark as Paid**.
+
+<Screenshot src="/images/sales/invoice-mark-paid.jpg" alt="Mark Invoice as Paid dialog" caption="(2) Amount, (3) Payment Method, (4) Payment Account, (5) Payment Date, (6) Mark as Paid." />
+</Step>
+
+</Steps>
+
+To apply one payment to several invoices, create an [Invoice
+Receipt](/docs/sales/invoice-receipts) from **Sales → Receipts → Invoice
+Receipts** instead.
+
+If the payment is partial, the invoice status becomes **Partial** and Accounts
+Receivable updates accordingly.
+
+## Money paid (vendor)
+
+<Steps>
+
+<Step>
+### Open Bill Payments
+Go to **Purchase → Payments → Bill Payments** and select **New Bill Payment**.
+</Step>
+
+<Step>
+### Choose the vendor and payment details
+Select the vendor, then choose the payment **Account**, and check the **Payment
+Date** and **Payment Method**.
+
+<Screenshot src="/images/purchases/bill-payment-new-annotated.jpg" alt="New Bill Payment form" caption="(1) Vendor, (4) Account, (5) Payment Date, (6) Payment Method." />
+</Step>
+
+<Step>
+### Apply the payment and save
+Under **Outstanding Bills**, tick the bills being paid and enter the **Payment**
+for each (full or partial). Select **Create**, or **Create & Send**.
+</Step>
+
+</Steps>
+
+If the payment is partial, the bill remains partially open and Accounts Payable
+updates. See [Bill Payments](/docs/purchases/bill-payments).
+
+## Related
+
+<Cards>
+  <Card title="Invoice Receipts" href="/docs/sales/invoice-receipts" />
+  <Card title="Bill Payments" href="/docs/purchases/bill-payments" />
+</Cards>

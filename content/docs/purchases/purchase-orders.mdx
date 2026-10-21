@@ -1,0 +1,81 @@
+---
+title: Purchase Orders
+description: Request goods or services from a vendor before a bill is created.
+---
+
+A **Purchase Order (PO)** requests goods or services from a vendor. It formalizes
+procurement before a bill is generated and gives visibility into expected
+payables.
+
+## The Purchase Orders list
+
+Go to **Purchase → Purchase Orders**.
+
+<Screenshot src="/images/purchases/purchase-order-list-annotated.jpg" alt="Purchase Orders list" caption="(1) New Purchase Order, (2) status tabs, (3) Vendors, Start date, End date, and Search filters, (4) View, Edit, Delete, and See more." />
+
+- **Status tabs** — **All**, **Draft**, **Pending**, **Complete**,
+  **Cancelled**, **Void**, and **Linked**, each with a count.
+- **Columns** — Vendor (with the PO number), Bill, Purchase Order Date, Payment
+  Term, Quantity, Amount, Status, and Actions.
+- **See more** menu — **Clone**, **Cancel**, and **Mark as Linked**.
+
+<Screenshot src="/images/purchases/purchase-order-row-actions.jpg" alt="Purchase order See more menu and bill link" caption="(1) The See more menu: Clone, Cancel, Mark as Linked. (2) The bill created from a PO, shown as a link." />
+
+## Creating a purchase order
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Purchase → Purchase Orders** and select **New Purchase Order**.
+</Step>
+
+<Step>
+### Select the vendor and enter the header details
+Choose the vendor in **Select Vendor** — the mailing address populates
+automatically. Enter a **Reference number** (optional) and **Email**, and check
+the **Payment Term**, **Due Date**, **Tax Type**, **Discount Type**, and
+**Purchase Order Date**. Optionally choose a **Location**.
+
+<Screenshot src="/images/purchases/purchase-order-new-annotated.jpg" alt="New Purchase Order form" caption="(1) Select Vendor, (2) Mailing Address, (3) Reference number, (4) Email, (5) Payment Term, (6) Due Date, (7) Tax Type, (8) Discount Type, (9) Purchase Order Date, (10) Location." />
+</Step>
+
+<Step>
+### Add items
+Under **Details**, search for items and use **Add Item** to add lines with
+quantities and pricing.
+</Step>
+
+<Step>
+### Save
+Add any **Attachments** and **Terms and Conditions**, then select **Save as
+Draft**, **Create**, or **Create & Send**.
+</Step>
+
+</Steps>
+
+## Purchased For field
+
+Purchase orders can include a **Purchased For** dropdown: *SJ Computers*,
+*Start Used Computers*, or *Both*. This field is customizable and appears only
+when it is enabled for your organization.
+
+## Converting to a bill
+
+When a PO is converted to a [Bill](/docs/purchases/bills), the bill number
+appears in the **Bill** column of the PO list as a **hyperlink** that opens that
+bill.
+
+<Callout type="info">
+  Purchase orders support the [approval workflow](/docs/administration/approvals). When
+  your organization turns on **Requires Approval** for this document in
+  **Settings → Approval Policy**, a new or changed document must be approved
+  before it takes effect.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Bills" href="/docs/purchases/bills" />
+  <Card title="Voiding Purchase Documents" href="/docs/purchases/voiding-purchase-documents" />
+</Cards>

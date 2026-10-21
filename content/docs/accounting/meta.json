@@ -1,0 +1,10 @@
+{
+  "title": "Accounting",
+  "icon": "BookOpen",
+  "root": true,
+  "pages": [
+    "index",
+    "chart-of-accounts",
+    "journal-entries"
+  ]
+}

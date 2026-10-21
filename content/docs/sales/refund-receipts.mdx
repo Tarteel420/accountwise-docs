@@ -1,0 +1,81 @@
+---
+title: Refund Receipts
+description: Refund money to a customer.
+---
+
+A **Refund Receipt** is created when a customer needs to be refunded.
+
+## The Refund Receipts list
+
+Go to **Sales → Refund Receipts**.
+
+<Screenshot src="/images/sales/refund-receipt-list-annotated.jpg" alt="Refund Receipts list" caption="(1) New Refund Receipt, (2) All, Manual, and Square tabs, (3) Customers, Start date, End date, and Search filters, (4) the Source of each refund." />
+
+- **Tabs** — **All**, **Manual**, and **Square**, each with a count.
+- **Columns** — Customer (with the refund receipt number), Refund Receipt
+  Date, Amount, **Source** (**Manual** or **Square**), and Actions (**View**).
+
+## Creating a refund receipt
+
+<Steps>
+
+<Step>
+### Open the form
+Go to **Sales → Refund Receipts** and select **New Refund Receipt**.
+</Step>
+
+<Step>
+### Enter the customer and refund details
+Choose the customer in **Select Customer** — the **Billing Address** is filled
+in. Enter the **Reference Number** and **Email**, and check the **Refund Receipt
+Date**. Set the **Payment Method** and the account to **Refund From**.
+Optionally choose the related **Invoice** and a **Location**.
+
+<Screenshot src="/images/sales/refund-receipt-new-1.jpg" alt="New Refund Receipt form" caption="(1) Select Customer, (2) Reference Number, (3) Email, (4) Refund Receipt Date, (5) Payment Method, (6) Refund From, (7) Invoice, (8) Location." />
+</Step>
+
+<Step>
+### Add the refund lines
+Under **Details**, select the related **Credit Memo** and enter the
+**Description**, **Quantity**, and **Rate** — the **Amount** is calculated.
+Select **Add Line Item** to add more lines.
+
+<Screenshot src="/images/sales/refund-receipt-new-2.jpg" alt="Refund receipt detail lines" caption="(9) Credit Memo, (10) Description, Quantity, Rate, and Amount, (11) Add Line Item." />
+</Step>
+
+<Step>
+### Save
+Add any **Attachments**, complete the **Terms and Conditions** (required), and
+select **Create & Send** to complete the refund.
+</Step>
+
+</Steps>
+
+## Refund directly from an invoice
+
+Refunds can also be started directly from the invoice screen with **Refund**
+(see [Invoices](/docs/sales/invoices#refunding-from-an-invoice)). In that case,
+the system automatically creates **both** the credit memo and the refund
+receipt.
+
+<Screenshot src="/images/sales/invoice-refund-dialog.jpg" alt="Process Refund dialog on an invoice" caption="The Process Refund dialog on an invoice: (1) Refund Amount, (2) Refund Account, (3) Reason, (4) Process Refund." width={760} />
+
+## Refund reason and notifications
+
+When processing a refund, you can add a **refund reason**. It appears in the
+audit trail, and the customer is notified by email with the refund status
+attached.
+
+<Callout type="info">
+  Refund receipts support the [approval workflow](/docs/administration/approvals). When
+  your organization turns on **Requires Approval** for this document in
+  **Settings → Approval Policy**, a new or changed document must be approved
+  before it takes effect.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Credit Memos" href="/docs/sales/credit-memos" />
+  <Card title="Audit Trail" href="/docs/administration/audit-trail" />
+</Cards>

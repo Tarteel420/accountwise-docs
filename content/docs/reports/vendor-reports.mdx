@@ -1,0 +1,47 @@
+---
+title: Vendor Reports
+description: Payables, vendor balances, and open and paid bills.
+---
+
+These reports focus on money owed to vendors. Open them from **Reports → Vendor
+Reports**. For the filter bar, see [Running a
+report](/docs/reports#running-a-report).
+
+| Report | Purpose | Report filters |
+| --- | --- | --- |
+| **AP Aging Summary** | Outstanding payables per vendor, grouped into aging buckets. | Vendor Name, Days, Period |
+| **AP Aging Detail** | Individual bills with their aging status, to identify overdue payments. | Vendor Name, Days, Period |
+| **Vendor Balance Summary** | Total balance payable per vendor. | Vendor Name |
+| **Vendor Balance Detail** | Each vendor's transactions and how the balance changes. | Vendor Name |
+| **Open Bills** | All unpaid vendor bills. | Vendor Name |
+| **Paid Bills** | Bills already paid, with total, paid, and remaining amounts. | Vendor Name |
+
+All of these reports also use the **Report Period** or the **Start Date** and
+**End Date**, and most have a **Location** filter under **Advanced**. In the AP
+aging reports, **Days** sets the length of each aging bucket and **Period** sets
+how many buckets there are, as in the [AR aging
+reports](/docs/reports/customer-reports#aging-buckets).
+
+## Report columns
+
+| Report | Columns |
+| --- | --- |
+| AP Aging Summary / Detail | Vendor, Current, 1-30, 31-60, 61-90, Over 90, Total |
+| Vendor Balance Summary | Vendor Name, Balance |
+| Vendor Balance Detail | Date, Transaction Type, Num, Due Date, Amount, Open Balance, Balance |
+| Paid Bills | Date, Type, Num, Due date, Total Amount, Paid Amount, Remaining |
+
+<Callout type="info">
+  Vendor balance reports include [Vendor
+  Credits](/docs/purchases/vendor-credits): balances reflect **Outstanding Bills
+  − Applied/Available Vendor Credits**, so the closing balance matches the ledger
+  closing balance. This applies to AP Aging Summary, AP Aging Detail, Vendor
+  Balance Summary, and Vendor Balance Detail.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Bills" href="/docs/purchases/bills" />
+  <Card title="Purchase Reports" href="/docs/reports/purchase-reports" />
+</Cards>

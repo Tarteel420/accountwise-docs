@@ -1,0 +1,76 @@
+---
+title: Sales Receipts
+description: Record an immediate sale and payment in a single step.
+---
+
+A **Sales Receipt** is used when a sale and its payment happen at the same time
+— typically in retail scenarios.
+
+## How it differs from an invoice
+
+Unlike an [Invoice](/docs/sales/invoices), a sales receipt does **not** create
+Accounts Receivable. It records both revenue and payment in one step.
+
+## The Sale Receipts list
+
+Go to **Sales → Receipts → Sales Receipts**. The list shows the **Customer
+Name** (with the receipt number), **Sale Receipt Date**, and **Amount**.
+
+<Screenshot src="/images/sales/sales-receipt-list-annotated.jpg" alt="Sale Receipts list" caption="(1) New Sale Receipt, (2) Customers filter, (3) Search, (4) View and the See more menu." />
+
+## Creating a sales receipt
+
+<Steps>
+
+<Step>
+### Open the form
+On the Sale Receipts page, select **New Sale Receipt**.
+</Step>
+
+<Step>
+### Select the customer
+Choose the customer in **Select Customer**. The **Billing Address** and
+**Email** are filled in from the customer record; use the pencil icon to change
+the billing address.
+</Step>
+
+<Step>
+### Enter the receipt and payment details
+Enter a **Reference number** and check the **Tax Type**, **Discount Type**, and
+**Sale Receipt Date**. Choose the **Payment Account** the money is received
+into and the **Payment Method** (for example, **Credit Card**). Optionally
+choose a **Sales Person** and **Location**.
+
+<Screenshot src="/images/sales/sales-receipt-new-1.jpg" alt="New Sale Receipt form" caption="(1) Select Customer, (2) Billing Address, (3) Reference number, (4) Email, (5) Tax Type, (6) Discount Type, (7) Sale Receipt Date, (8) Payment Account, (9) Payment Method." />
+</Step>
+
+<Step>
+### Add items
+Under **Details**, use **Search AccountWise Items** or **Add Item** to add the
+items sold, and **Add Additional Surcharge** if needed. Enter any **tax** and
+**discount**. The item lines and totals work the same way as on an invoice —
+see [Invoices](/docs/sales/invoices#creating-an-invoice-directly).
+</Step>
+
+<Step>
+### Save
+Add any **Attachments**, complete the **Terms and Conditions** (required), and
+select **Create**, or **Create & Send** to email the receipt to the customer.
+Both the revenue and payment are recorded in a single step.
+</Step>
+
+</Steps>
+
+<Callout type="info">
+  Sales receipts support the [approval workflow](/docs/administration/approvals). When
+  your organization turns on **Requires Approval** for this document in
+  **Settings → Approval Policy**, a new or changed document must be approved
+  before it takes effect.
+</Callout>
+
+## Related
+
+<Cards>
+  <Card title="Invoices" href="/docs/sales/invoices" />
+  <Card title="Bank Deposits" href="/docs/banking/bank-deposits" />
+</Cards>

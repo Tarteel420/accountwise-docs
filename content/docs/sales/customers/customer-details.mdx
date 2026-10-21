@@ -1,0 +1,116 @@
+---
+title: Customer Details
+description: The tabs, shortcuts, and financial summary on a customer's detail page.
+---
+
+The customer detail page gives a full view of one customer. To open it, select
+the customer's name in the Customers list, then select **View Details** in the
+quick view.
+
+<Screenshot src="/images/sales/customers/customer-detail-top.jpg" alt="Customer detail page" caption="(1) Make Inactive, (2) Create Document, (3) edit Tags, (4) detail tabs, (5) edit a section." />
+
+## Page header
+
+| Control | What it does |
+| --- | --- |
+| Back arrow | Returns to the Customers list. |
+| **Tags** (pencil icon) | Add or change the customer's tags. |
+| **Make Inactive** | Changes the customer to inactive. |
+| **Create Document** | Creates a sales document for this customer: **Create Invoice**, **Create Sales Order**, or **Create Credit Memo**. |
+
+<Screenshot src="/images/sales/customers/customer-create-document.jpg" alt="Create Document menu" caption="Open Create Document (1) and pick the document to create (2)." width={740} />
+
+## Detail tabs
+
+| Tab | What it shows |
+| --- | --- |
+| **Details** | General information, addresses, profile information, contacts, and the financial summary. |
+| **Activities** | Activities for this customer, split into **To Do**, **Completed**, **Cancelled**, and **All**. |
+| **Addresses** | All shipping and billing addresses for the customer. |
+| **Notes** | Internal notes about the customer. |
+| **Sub Customers** | Customers that have this customer as their parent. |
+| **Attachments** | Files uploaded to the customer record. |
+| **Transactions** | All of the customer's transactions: invoices, payments received, sales orders, sales receipts, and credit memos. |
+| **History** | A log of changes to the customer — for example, when it was created or updated and when assignments were created or deleted — with the user and time. |
+
+### Details
+
+The **Details** tab shows the customer's **General information**, **Addresses**,
+**Profile Information**, and **Contacts**. Use the pencil icon on a section to
+edit it. In **Contacts**, select **New contact** to add a contact; the primary
+contact is labelled **Primary**.
+
+At the bottom of the tab, expand **Financial Summary** to see:
+
+- **Current Month Revenue**, **Lifetime Revenue**, **Outstanding Amount**,
+  **Customer Credit**, and **Refunds**.
+- **Revenue Distribution** — current month vs previous months.
+- **Invoice Status** — outstanding vs paid.
+
+<Screenshot src="/images/sales/customers/customer-contacts-summary.jpg" alt="Contacts section and collapsed Financial Summary" caption="(1) New contact. (2) Select Financial Summary to expand it." />
+
+<Screenshot src="/images/sales/customers/customer-financial-summary.jpg" alt="Expanded Financial Summary" caption="The expanded Financial Summary." />
+
+### Activities
+
+The **Activities** tab lists activities for this customer. Filter by **Assigned
+user**, **Type**, **Search**, or **Date range**, and select **New activity** to
+add one. See [Activities & Notes](/docs/sales/customers/activities-and-notes).
+
+<Screenshot src="/images/sales/customers/customer-activities-tab.jpg" alt="Customer Activities tab" caption="(1) To Do, Completed, Cancelled, and All tabs. (2) New activity." />
+
+### Addresses
+
+The **Addresses** tab lists the customer's addresses with their **Location
+Name**, **Address**, and **Contact**. Use **Address Type** to switch between
+shipping and billing addresses. The default address is labelled **Default**.
+Select **New address** to add an address. Use the row menu (**⋮**) on an
+address to **Edit** it, **Make Default**, or **Delete** it.
+
+<Screenshot src="/images/sales/customers/customer-addresses-tab.jpg" alt="Customer Addresses tab" caption="(1) Address Type, (2) New address, (3) row menu." />
+
+### Notes
+
+Select **New note** to open **Add note**. Enter an optional **Title** and a
+**Description** (required) using the text editor, then select **Add**. The
+dialog also includes an **Associated with pickup/drop off** option.
+
+<Screenshot src="/images/sales/customers/customer-notes-tab.jpg" alt="Customer Notes tab" caption="(1) New note, (2) switch between list and grid view." />
+
+<Screenshot src="/images/sales/customers/customer-add-note.jpg" alt="Add note dialog" caption="The Add note dialog: (1) Title, (2) Description." />
+
+### Transactions
+
+The **Transactions** tab lists all of the customer's transactions in one place,
+grouped by document type:
+
+| Section | Columns |
+| --- | --- |
+| **Invoices** | Date, Invoice #, Due Date, Paid, Status, Amount |
+| **Payments Received** | Date, Receipt #, Payment Method, Status, Amount |
+| **Sales Orders** | Date, SO #, Invoice #, Qty, Status, Amount |
+| **Sales Receipts** | Date, Receipt #, Payment Method, Account, Amount |
+| **Credit Memos** | Date, Credit Memo #, Invoice #, Applied, Status, Amount |
+
+Select a document number to open the document. When a section has more records
+than shown, select its **View all** link — for example, **View all invoices** —
+to open that document's list, already filtered to this customer.
+
+<Screenshot src="/images/sales/customers/customer-transactions.jpg" alt="Customer Transactions tab" caption="(1) Transactions tab, (2) View all invoices." />
+
+<Screenshot src="/images/sales/customers/customer-transactions-more.jpg" alt="More sections on the Transactions tab" caption="(1) Payments Received, (2) Sales Orders, (3) Sales Receipts, (4) Credit Memos." />
+
+### Attachments
+
+Select **Upload** to add a file. Any document can be uploaded — for example, a
+signed contract, a reseller certificate, or a W-9 form. Uploaded files are kept
+on the customer record, so they are available every time you open the
+customer. The list shows each file's **Name**, **Size**, **Uploaded at**, and
+**Uploaded by**.
+
+## Related
+
+<Cards>
+  <Card title="Creating Customers" href="/docs/sales/customers/creating-customers" />
+  <Card title="Activities & Notes" href="/docs/sales/customers/activities-and-notes" />
+</Cards>

@@ -1,0 +1,112 @@
+---
+title: Customer Assignments
+description: Assign customers to one or more salespersons, and review who each customer is assigned to.
+---
+
+The **Customer Assignments** page lets you link customers to salespersons in
+bulk. It lists every customer with its current assignment status and
+salesperson, so you can see coverage at a glance and make changes from one
+place.
+
+<Callout type="info">
+  When a customer is assigned to a salesperson, that salesperson can only see
+  their **own** assigned customers and the related documents. See [User
+  Roles](/docs/getting-started/user-roles).
+</Callout>
+
+## Open Customer Assignments
+
+Go to **Customers Management → Customer Assignments**.
+
+<Screenshot src="/images/sales/customers/assignments-list.jpg" alt="Customer Assignments page" caption="(1) Filter by Salesperson, (2) Assignment Status, (3) Search, (4) Assign, (5) Unassign, (6) the Current Salesperson field on a row." />
+
+The list shows the following columns:
+
+| Column | What it shows |
+| --- | --- |
+| Customer Name | The customer record. |
+| EPA Number | The customer's EPA number, if entered. |
+| Website URL | The customer's website, if entered. |
+| Status | **assigned** or **unassigned**. |
+| Current Salesperson | The salesperson(s) the customer is assigned to. |
+
+## Filtering the list
+
+Use the controls above the list to narrow it down:
+
+- **Filter by Salesperson** — show only customers assigned to a specific salesperson.
+- **Assignment Status** — choose **All Customers**, **Assigned**, or **Unassigned**.
+- **Search** — find a customer by name.
+
+## Assign customers to salespersons
+
+<Steps>
+
+<Step>
+### Select the customers
+Tick the checkbox next to each customer you want to assign. A banner shows how
+many customers are selected, and the **Assign** button shows the same count —
+for example, **Assign (2)**.
+
+<Screenshot src="/images/sales/customers/assignments-selected.jpg" alt="Two customers selected" caption="(1) Tick the customers. (2) Assign and (3) Unassign show the number selected." />
+</Step>
+
+<Step>
+### Select Assign
+Select **Assign**. The **Assign Customers to Salesperson** dialog opens and
+confirms how many customers you are about to assign.
+</Step>
+
+<Step>
+### Choose the salesperson(s)
+In **Select Salesperson(s)**, choose one or more salespersons. A customer can be
+assigned to **multiple salespersons**.
+
+The **Assignment Summary** shows how many customers will be assigned and how
+many salespersons will receive assignments.
+
+<Screenshot src="/images/sales/customers/assignments-assign-dialog.jpg" alt="Assign Customers to Salesperson dialog" caption="(1) Select Salesperson(s). (2) Assign Customers stays disabled until a salesperson is selected." width={760} />
+</Step>
+
+<Step>
+### Confirm
+Select **Assign Customers**. The button stays disabled until at least one
+salesperson is selected. Select **Cancel** to close the dialog without making
+changes.
+</Step>
+
+</Steps>
+
+## Unassign customers
+
+<Steps>
+
+<Step>
+### Select the customers
+Tick the checkbox next to each customer you want to unassign. The **Unassign**
+button shows how many customers are selected.
+</Step>
+
+<Step>
+### Confirm the unassignment
+Select **Unassign**. In the **Confirm Unassignment** dialog (*Are you sure you
+want to unassign?*), select **Yes, Unassign** to continue, or **Cancel**.
+
+<Screenshot src="/images/sales/customers/assignments-unassign-confirm.jpg" alt="Confirm Unassignment dialog" caption="Select Yes, Unassign (1) to remove the assignment." width={590} />
+</Step>
+
+</Steps>
+
+## Changing a single customer's assignment
+
+To change one customer's assignment, use the **Current Salesperson** field
+(**Select salespersons**) on that customer's row to choose salespersons for that
+customer.
+
+## Related
+
+<Cards>
+  <Card title="Creating Customers" href="/docs/sales/customers/creating-customers" />
+  <Card title="User Roles" href="/docs/getting-started/user-roles" />
+  <Card title="Salesperson Reports" href="/docs/reports/salesperson-reports" />
+</Cards>

@@ -1,0 +1,59 @@
+---
+title: Ledger Reports
+description: The General Ledger and Trial Balance.
+---
+
+These reports let you trace and verify the underlying accounting. Open them from
+**Reports → General Ledger** and **Reports → Trial Balance**. For the filter
+bar, see [Running a report](/docs/reports#running-a-report).
+
+## General Ledger
+
+Lists all general ledger entries and transactions, so you can track the detailed
+history of each account.
+
+| Filter | Description |
+| --- | --- |
+| **Account** | The account or accounts to show. |
+| **Report Period** / dates | The period to cover. |
+| **Location** | Limit the report to a location. |
+| **Search** | Find specific entries. |
+| **Customer**, **Vendor**, **Employee** | Limit the report to entries for a customer, vendor, or employee. |
+| **Transaction Type** | Limit the report to a type of transaction. |
+
+<Screenshot src="/images/reports/general-ledger-filters.jpg" alt="General Ledger filters" caption="(1) Account, (2) Advanced, (3) Location, Search, Customer, Vendor, Employee, and Transaction Type, (4) Customize Columns." />
+
+The report shows **Date**, **Account**, **Description**, **Type**, **Customer**,
+**Vendor**, **Employee**, **Debit**, **Credit**, and **Balance** by default.
+
+### Choosing columns
+
+Select **Customize Columns** (gear icon) to choose the columns. Tick a column to
+show it or untick it to hide it, and use the arrows to change the order. Columns
+marked **(Required)** can't be hidden. Optional columns include **Location** and
+document numbers such as **Invoice Number**, **Bill Number**, and **Journal Entry
+Number**. Select **Save Changes**, or **Reset to Default** to restore the
+original columns.
+
+<Screenshot src="/images/reports/customize-columns.jpg" alt="Customize Columns dialog" caption="(1) Required columns can't be hidden, (2) move a column up or down, (3) show or hide a column, (4) Reset to Default, (5) Save Changes." width={640} />
+
+<Callout type="info">
+  To check a bank account before or after a [Bank
+  Reconciliation](/docs/banking/bank-reconciliation), filter the General Ledger
+  on that account.
+</Callout>
+
+## Trial Balance
+
+Shows the balance of every account, so you can confirm that total debits equal
+total credits.
+
+- **Filters** — Report Period (or dates) and **Location**.
+- **Columns** — **Name**, **Debit**, and **Credit**.
+
+## Related
+
+<Cards>
+  <Card title="Chart of Accounts" href="/docs/accounting/chart-of-accounts" />
+  <Card title="Journal Entries" href="/docs/accounting/journal-entries" />
+</Cards>
